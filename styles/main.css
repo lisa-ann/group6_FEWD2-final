@@ -1,0 +1,201 @@
+/*******************************************************
+    Project Details
+    Authors: Lisa Silva, KC Wilson, Leyla Atan, Lu Zhang
+    Project: Tasty.co Group 6 Final
+    Version: 1.1
+    Last updated: 1/21/2025
+
+    ------------------------
+    TABLE OF CONTENTS
+    ------------------------
+        1. VARIABLES
+        2. GLOBAL STYLES
+        3. HEADER & NAV
+        4. MAIN BODY CONTENT
+        5. GENERIC SELECTORS
+        6. FOOTER
+        7. FORMS
+        8. MEDIA QUERIES
+
+*******************************************************/
+
+/*******************************************************
+    1. VARIABLES
+ ******************************************************/
+:root {
+    --highlight-color: #FFD517; /* yellow */
+    --light-color: #E0DACC;     /* cream */
+    --primary-color: #0E51AC;   /* blue */
+    --secondary-color: #737373; /* gray */
+}
+
+/*******************************************************
+    2. GLOBAL STYLES
+ ******************************************************/
+
+html {
+    font-size: 10px;
+}
+body {
+    background-color: var(--light-color);
+    color: var(--secondary-color);
+    font-family: "Assistant", sans-serif;
+}
+html, body {
+    font-size: 1rem;
+    height: 100%;
+    width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Caveat", serif;
+}
+h1 {
+    color: #fff;
+    font-size: 3.6rem;
+}
+h2 {
+    font-size: 2.6rem;
+}
+h3 {
+    font-size: 2.0rem;
+}
+h2, h3, h4 {
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+}
+h4, h5, h6 {
+    font-size: 1.8rem;
+}
+img {
+    height: auto;
+    max-width: 100%;
+}
+p {
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+a, a:visited {
+    color: var(--primary-color);
+}
+a:hover {
+    color: var(--highlight-color);
+    text-decoration: underline;
+}
+/*******************************************************
+    3. HEADER & NAV
+ ******************************************************/
+header {
+    background-color: var(--primary-color);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+header img {
+    width: 98px;
+}
+nav a, nav a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+nav a:hover, footer a:hover {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+nav a {
+    display: block;
+}
+nav ul li {
+    padding: .5rem;
+}
+nav ul.menu {
+    display: none;
+}
+nav input[type=checkbox]:checked ~ ul.menu {
+    display: block;
+}
+nav input[type=checkbox] {
+    display: none;
+}
+.showMenu {
+    cursor: pointer;
+    display: block;
+    padding: .3em;
+}
+.showMenu, nav li {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+}
+/*******************************************************
+    4. MAIN BODY CONTENT
+ ******************************************************/
+
+.text-center {
+    text-align: center;
+}
+.text-bold {
+    font-weight: bold;
+}
+main section {
+    margin: 2rem;
+}
+
+/*******************************************************
+    5. GENERIC SELECTORS
+ ******************************************************/
+
+
+/*******************************************************
+    6. FOOTER
+ ******************************************************/
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+footer a, footer a:visited {
+    color: #fff;
+    padding: .6em;
+}
+footer a:hover {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+/*******************************************************
+    7. FORMS
+ ******************************************************/
+input[type=submit] {
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: 0;
+    color: #fff;
+    font-family: "Assistant", sans-serif;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+input[type=text], input[type=number], input[type=email], input[type=tel], textarea, select {
+    border: 1px solid var(--secondary-color);
+    margin: 1rem 0 2rem;
+    padding: .75rem;
+    width: 90%;
+    display: block;
+}
+fieldset {
+    border: 1px dashed var(--primary-color);
+    margin: 2rem 0;
+    padding: 2rem;
+}
+legend {
+    color: var(--primary-color);
+}
+/*******************************************************
+    8. MEDIA QUERIES
+ ******************************************************/
+
+@media screen and (min-width: 800px) {
+    header > * {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
