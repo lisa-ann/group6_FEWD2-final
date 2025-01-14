@@ -17,8 +17,9 @@
     <header>
         <nav>
             <a href="index.html"><img src="images/logo.png" alt="Tasty.co Home"></a>
-            <label for="showMenu" class="showMenu">Navigation <span class="fa-solid fa-bars"></span></label>
-            <input type="checkbox" id="showMenu" role="button">
+            <a href="pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            <label for="showMenu" class="showMenu"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" id="showMenu" role="button" aria-pressed="true">
             <ul class="menu">
                 <li><a href="pages/recipes.html">RECIPES</a></li>
                 <li><a href="pages/tips.html">TIPS &AMP; TRICKS</a></li>
@@ -33,17 +34,118 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section>
-            <h1>This is an h1</h1>
-            <h2>This is an h2</h2>
-            <h3>This is an h3</h3>
-            <h4>This is an h4</h4>
-            <h5>This is an h5</h5>
-            <h6>This is an h6</h6>
-            <p>This is a paragraph</p>
+    <!-- Hero Section -->
+     <main>
+       <picture class="heroImg">
+            <img src="images/heroPageSalad.jpg" alt="Rainbow Salad">
+       </picture>
+        <section class="hero">
+            <h2>What We're Cooking Today</h2>
+            <h1>Rainbow Salad</h1>
+            <a href="#" class="recipe-link">See the recipe ...</a>
+        </section> 
+        <section class="signup-form">
+            <p>Want more recipes? <a href="#signup">Sign up here</a>.</p>
+            <input type="text" placeholder="Email / Tel">
+            <button class="create-account">Create an account</button>
+            <p>Already have an account? <a href="#signin">Sign in here</a>.</p>
         </section>
-    </main>
+        <!-- Latest Recipes Section -->
+        <section class="latest-recipes">
+            <h2>Latest Recipes</h2>
+            <section class="recipe-carousel">
+                <!-- Recipe Cards -->
+                <picture class="recipe-card">
+                    <img src="images/pumpkin-soup.jpg" alt="Pumpkin Soup">
+                </picture>
+                <h3>Pumpkin Soup</h3>
+
+                <picture class="recipe-card">
+                    <img src="images/veggie-spaghetti.jpg" alt="Veggie Spaghetti">
+                </picture>
+                <h3>Veggie Spaghetti</h3>
+
+                <picture class="recipe-card">
+                    <img src="images/banaberry-toast.jpg" alt="Banaberry Toast">
+                </picture>
+                <h3>Banaberry Toast</h3>
+
+                <picture class="recipe-card">
+                    <img src="images/passion-smoothie.jpg" alt="Passion Smoothie">
+                </picture>
+                <h3>Passion Smoothie</h3>
+
+                <picture class="recipe-card">
+                    <img src="images/egg-meets-avocado.jpg" alt="Egg Meets Avocado">
+                </picture>
+                <h3>Egg Meets Avocado</h3>
+            </section>
+        </section>
+
+        <!-- Tips & Tricks Section -->
+        <section class="tips-tricks">
+            <h2>Tips &amp; Tricks</h2>
+            <section class="tips-carousel">
+                <!-- Tips Cards -->
+                <section class="tip-card">
+                    <img src="images/Tip1.jpg" alt="Cup cake">
+                    <h3>26 Seriously Useful Baking Tips You'll Wish You Know About Sooner</h3>
+                    <p>We recently asked members of the BuzzFeed Community for their best baking tip that everyone should know. Here are some of their suggestions. <a href="#">Read More&nbsp;&raquo;</a></p>
+                </section>
+
+                <section class="tip-card">
+                    <img src="images/tip2.png" alt="Cooking Salad">
+                    <h3>My favorite way to make Korean Spicy Cucumber Salad</h3>
+                    <p>This refreshing salad is perfect for hot summer days. The cucumbers are smashed and tossed with a tangy dressing, then topped with toasted sesame seeds and red pepper flakes for crunch and heat. <a href="#">Read More&nbsp;&raquo;</a></p>
+                </section>
+
+            </section>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products">
+            <h2>Our Products</h2>
+            <section class="cookbooks">
+                <h2>Cookbooks</h2>
+                <a href="pages/product.html" class="shop-all">Shop All</a>
+                <!-- Cookbook products... -->
+                 <picture class="book-card">
+                    <img src="images/book1.png" alt="Book Cover 1">
+                </picture>
+                <button>Add to Cart</button>
+
+                <picture class="book-card">
+                    <img src="images/book2.png" alt="Book Cover 2">
+                </picture>
+                <button>Add to Cart</button>
+                
+                <picture class="book-card">
+                    <img src="images/book3.png" alt="Book Cover 3">
+                </picture>
+                <button>Add to Cart</button>
+            </section>
+            <section class="cookware">
+                <h2>Cookware</h2>
+                <a href="pages/product.html" class="shop-all">Shop All</a>
+                <!-- Cookware products... -->
+                <picture class="cooker-card">
+                    <img src="images/cooker1.png" alt="Cookware 1">
+                </picture>
+                <button>Add to Cart</button>
+
+                 <picture class="cooker-card">
+                    <img src="images/cooker2.png" alt="Cookware 2">
+                </picture>
+                <button>Add to Cart</button>
+            </section>
+        </section>
+
+        <!-- Advertisement Section -->
+         <section class="ad">
+             <h6>ADVERTISEMENT</h6>
+             <img src="images/ad.png" alt="Target Ads image">
+         </section>
+     </main>
     <footer>
         <a href="https://www.facebook.com/buzzfeedtasty/" title="Go to Tasty on Facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         <a href="https://twitter.com/tasty" title="Go to Tasty on X" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
