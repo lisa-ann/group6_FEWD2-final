@@ -90,11 +90,30 @@ img {
  ******************************************************/
 header {
     background-color: var(--primary-color);
-    padding: 2rem 1rem;
+/*    padding: 2rem 1rem;*/
     text-align: center;
 }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between menu items */
+}
+
+.menu a, .menu label {
+  text-decoration: none;
+  font-size: 3rem; /* Adjust icon/text size */
+}
+
 header img {
-    width: 98px;
+    width: 150px;
 }
 nav a, nav a:visited, label i  {
     color: #fff;
