@@ -16,23 +16,29 @@
 <body>
     <header>
         <nav>
-          <div class="header">
-           <div class="logo">
-            <a href="index.html"><img src="images/logo.png" alt="Tasty.co Home"></a>
-            </div>
-            <div class="menu">
-            <a href="pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            <label for="showMenu" class="showMenu"><i class="fa-solid fa-bars"></i></label>
-            </div>
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html" aria-label="Go to Tasty.co Home">
+                        <img src="images/logo.png" alt="Tasty.co Home">
+                    </a>
+                </div>
+                <div class="menu">
+                    <a href="pages/cart.html" aria-label="Go to Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                    <label for="showMenu" class="showMenu" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                </div>
             </div>
             <input type="checkbox" id="showMenu" role="button" aria-pressed="true">
-            <ul class="menu">
+            <ul class="menu" aria-label="Main Menu">
                 <li><a href="pages/recipes.html">RECIPES</a></li>
-                <li><a href="pages/tips.html">TIPS &AMP; TRICKS</a></li>
+                <li><a href="pages/tips.html">TIPS &amp; TRICKS</a></li>
                 <li><a href="pages/products.html">PRODUCTS</a></li>
                 <li><a href="pages/account.html">MY ACCOUNT</a></li>
                 <li><a href="index.html">OUR COMPANY</a>
-                    <ul class="subMenu">
+                    <ul class="subMenu" aria-label="Submenu">
                         <li><a href="pages/about.html">ABOUT US</a></li>
                         <li><a href="pages/contact.html">CONTACT US</a></li>
                     </ul>
@@ -40,60 +46,65 @@
             </ul>
         </nav>
     </header>
-    
-<!--    serach bar-->
-  <div class="search-bar">
-   <button type="submit"><i class="fa-solid fa-search"></i></button>
-    <form action="/search" method="GET">
-    <input type="text" name="q" placeholder="Search Your Recipe" />
-    </form>
-    </div>
-    
-    <!-- Hero Section -->
-     <main>
-       <picture class="heroImg">
-            <img src="images/heroPageSalad.jpg" alt="Rainbow Salad">
-       </picture>
+
+    <!-- Search Bar Section -->
+    <section class="search-bar">
+       <button type="submit" aria-label="Search Button">
+                <i class="fa-solid fa-search"></i>
+            </button>
+        <form action="/search" method="GET" aria-label="Search Recipes">
+            <input type="text" name="q" placeholder="Search Your Recipes" aria-label="Search input" />
+            
+        </form>
+    </section>
+
+    <!-- Main Content -->
+    <main>
         <section class="hero">
+            <picture class="heroImg">
+                <img src="images/heroPageSalad.jpg" alt="Rainbow Salad" />
+            </picture>
             <h2>What We're Cooking Today</h2>
             <h1>Rainbow Salad</h1>
-            <a href="#" class="recipe-link">See the recipe ...</a>
-        </section> 
+            <a href="#" class="recipe-link" aria-label="View Rainbow Salad Recipe">See the recipe ...</a>
+        </section>
+
+        <!-- Signup Form Section -->
         <section class="signup-form">
             <p>Want more recipes? <a href="#signup">Sign up here</a>.</p>
-            <input type="text" placeholder="Email / Tel">
-            <button class="create-account">Create an account</button>
+            <input type="text" placeholder="Email / Tel" aria-label="Sign up Email" />
+            <button class="create-account" aria-label="Create Account">Create an account</button>
             <p>Already have an account? <a href="#signin">Sign in here</a>.</p>
         </section>
+
         <!-- Latest Recipes Section -->
         <section class="latest-recipes">
             <h2>Latest Recipes</h2>
             <section class="recipe-carousel">
-                <!-- Recipe Cards -->
-                <picture class="recipe-card">
-                    <img src="images/pumpkin-soup.jpg" alt="Pumpkin Soup">
-                </picture>
-                <h3>Pumpkin Soup</h3>
+                <article class="recipe-card">
+                    <img src="images/pumpkin-soup.jpg" alt="Pumpkin Soup" />
+                    <h3>Pumpkin Soup</h3>
+                </article>
 
-                <picture class="recipe-card">
-                    <img src="images/veggie-spaghetti.jpg" alt="Veggie Spaghetti">
-                </picture>
-                <h3>Veggie Spaghetti</h3>
+                <article class="recipe-card">
+                    <img src="images/veggie-spaghetti.jpg" alt="Veggie Spaghetti" />
+                    <h3>Veggie Spaghetti</h3>
+                </article>
 
-                <picture class="recipe-card">
-                    <img src="images/banaberry-toast.jpg" alt="Banaberry Toast">
-                </picture>
-                <h3>Banaberry Toast</h3>
+                <article class="recipe-card">
+                    <img src="images/banaberry-toast.jpg" alt="Banaberry Toast" />
+                    <h3>Banaberry Toast</h3>
+                </article>
 
-                <picture class="recipe-card">
-                    <img src="images/passion-smoothie.jpg" alt="Passion Smoothie">
-                </picture>
-                <h3>Passion Smoothie</h3>
+                <article class="recipe-card">
+                    <img src="images/passion-smoothie.jpg" alt="Passion Smoothie" />
+                    <h3>Passion Smoothie</h3>
+                </article>
 
-                <picture class="recipe-card">
-                    <img src="images/egg-meets-avocado.jpg" alt="Egg Meets Avocado">
-                </picture>
-                <h3>Egg Meets Avocado</h3>
+                <article class="recipe-card">
+                    <img src="images/egg-meets-avocado.jpg" alt="Egg Meets Avocado" />
+                    <h3>Egg Meets Avocado</h3>
+                </article>
             </section>
         </section>
 
@@ -101,19 +112,17 @@
         <section class="tips-tricks">
             <h2>Tips &amp; Tricks</h2>
             <section class="tips-carousel">
-                <!-- Tips Cards -->
-                <section class="tip-card">
-                    <img src="images/Tip1.jpg" alt="Cup cake">
+                <article class="tip-card">
+                    <img src="images/Tip1.jpg" alt="Cup cake" />
                     <h3>26 Seriously Useful Baking Tips You'll Wish You Know About Sooner</h3>
-                    <p>We recently asked members of the BuzzFeed Community for their best baking tip that everyone should know. Here are some of their suggestions. <a href="#">Read More&nbsp;&raquo;</a></p>
-                </section>
+                    <p>We recently asked members of the BuzzFeed Community for their best baking tip that everyone should know. Here are some of their suggestions. <a href="#">Read More&nbsp;&raquo;</a></p>
+                </article>
 
-                <section class="tip-card">
-                    <img src="images/tip2.png" alt="Cooking Salad">
+                <article class="tip-card">
+                    <img src="images/tip2.png" alt="Cooking Salad" />
                     <h3>My favorite way to make Korean Spicy Cucumber Salad</h3>
                     <p>This refreshing salad is perfect for hot summer days. The cucumbers are smashed and tossed with a tangy dressing, then topped with toasted sesame seeds and red pepper flakes for crunch and heat. <a href="#">Read More&nbsp;&raquo;</a></p>
-                </section>
-
+                </article>
             </section>
         </section>
 
@@ -121,53 +130,71 @@
         <section class="products">
             <h2>Our Products</h2>
             <section class="cookbooks">
-                <h2>Cookbooks</h2>
-                <a href="pages/product.html" class="shop-all">Shop All</a>
-                <!-- Cookbook products... -->
-                 <picture class="book-card">
-                    <img src="images/book1.png" alt="Book Cover 1">
-                </picture>
-                <button>Add to Cart</button>
+                <h3>Cookbooks</h3>
+                <a href="pages/product.html" class="shop-all" aria-label="Shop All Cookbooks">Shop All</a>
+                <article class="book-card">
+                    <img src="images/book1.png" alt="Book Cover 1" />
+                    <button>Add to Cart</button>
+                </article>
 
-                <picture class="book-card">
-                    <img src="images/book2.png" alt="Book Cover 2">
-                </picture>
-                <button>Add to Cart</button>
-                
-                <picture class="book-card">
-                    <img src="images/book3.png" alt="Book Cover 3">
-                </picture>
-                <button>Add to Cart</button>
+                <article class="book-card">
+                    <img src="images/book2.png" alt="Book Cover 2" />
+                    <button>Add to Cart</button>
+                </article>
+
+                <article class="book-card">
+                    <img src="images/book3.png" alt="Book Cover 3" />
+                    <button>Add to Cart</button>
+                </article>
             </section>
-            <section class="cookware">
-                <h2>Cookware</h2>
-                <a href="pages/product.html" class="shop-all">Shop All</a>
-                <!-- Cookware products... -->
-                <picture class="cooker-card">
-                    <img src="images/cooker1.png" alt="Cookware 1">
-                </picture>
-                <button>Add to Cart</button>
 
-                 <picture class="cooker-card">
-                    <img src="images/cooker2.png" alt="Cookware 2">
-                </picture>
-                <button>Add to Cart</button>
+            <section class="cookware">
+                <h3>Cookware</h3>
+                <a href="pages/product.html" class="shop-all" aria-label="Shop All Cookware">Shop All</a>
+                <article class="cooker-card">
+                    <img src="images/cooker1.png" alt="Cookware 1" />
+                    <button>Add to Cart</button>
+                </article>
+
+                <article class="cooker-card">
+                    <img src="images/cooker2.png" alt="Cookware 2" />
+                    <button>Add to Cart</button>
+                </article>
             </section>
         </section>
 
         <!-- Advertisement Section -->
-         <section class="ad">
-             <h6>ADVERTISEMENT</h6>
-             <img src="images/ad.png" alt="Target Ads image">
-         </section>
-     </main>
+        <section class="ad">
+            <h6>ADVERTISEMENT</h6>
+            <img src="images/ad.png" alt="Target Ads image" />
+        </section>
+    </main>
+
     <footer>
-        <h6>Follow Tasty</h6>
-        <a href="https://www.facebook.com/buzzfeedtasty/" title="Go to Tasty on Facebook" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-        <a href="https://twitter.com/tasty" title="Go to Tasty on X" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://www.instagram.com/buzzfeedtasty" title="Go to Tasty on Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.youtube.com/buzzfeedtasty" title="Go to Tasty on Youtube" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-        <p>&copy; 2025 BuzzFeed, Inc</p>
+        <section class="footer-info">
+            <h6>Payment Method</h6>
+            <h6>Follow Us</h6>
+            <a href="https://www.facebook.com/buzzfeedtasty/" title="Go to Tasty on Facebook" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/tasty" title="Go to Tasty on X" target="_blank" aria-label="X Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/buzzfeedtasty" title="Go to Tasty on Instagram" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com/buzzfeedtasty" title="Go to Tasty on Youtube" target="_blank" aria-label="YouTube">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+        </section>
+
+        <section class="end-logo">
+            <a href="index.html" aria-label="Go to Tasty.co Home">
+                <img src="images/logo.png" alt="Tasty.co Home" />
+            </a>
+            <p>&copy; BuzzFeed, Inc 2024</p>
+        </section>
     </footer>
 </body>
+
 </html>
