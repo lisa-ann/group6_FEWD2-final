@@ -393,6 +393,10 @@ legend {
         justify-content: flex-start;  /* Align menu items side by side */
         padding-right: 1rem;
     }
+    nav input[type=checkbox]:checked ~ ul.menu {
+    display: flex;
+  
+}
     
     .menu a {
         font-size: 1.2rem;  /* Adjust font size if necessary */
@@ -425,7 +429,6 @@ legend {
     }
     .header{
         justify-content: space-between;
-        width: 100;
     }
 
     .header button{display: flex;}
