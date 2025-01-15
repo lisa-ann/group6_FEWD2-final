@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,46 +10,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+
 </head>
 
 <body>
     <header>
         <nav>
-          <div class="header">
-           <div class="logo">
-            <a href="../index.html"><img src="../images/logo.png" alt="Tasty.co Home"></a>
-            </div>
-            <div class="menu">
-            <a href="pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            <label for="showMenu" class="showMenu"><i class="fa-solid fa-bars"></i></label>
-            </div>
-            </div>
-            <input type="checkbox" id="showMenu" role="button" aria-pressed="true">
-            <ul class="menu">
-                <li><a href="pages/recipes.html">RECIPES</a></li>
-                <li><a href="pages/tips.html">TIPS &AMP; TRICKS</a></li>
-                <li><a href="pages/products.html">PRODUCTS</a></li>
-                <li><a href="pages/account.html">MY ACCOUNT</a></li>
-                <li><a href="index.html">OUR COMPANY</a>
-                    <ul class="subMenu">
-                        <li><a href="pages/about.html">ABOUT US</a></li>
-                        <li><a href="pages/contact.html">CONTACT US</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    
-<!--    serach bar-->
-  <div class="search-bar">
-   <button type="submit"><i class="fa-solid fa-search"></i></button>
-    <form action="/search" method="GET">
-    <input type="text" name="q" placeholder="Search Your Recipes" />
-    </form>
+    <div class="header">
+        <div class="logo">
+            <a href="index.html" aria-label="Go to Tasty.co Home">
+                <img src="images/logo.png" alt="Tasty.co Home">
+            </a>
+        </div>
+        <div class="menu">
+            <label for="showMenu" class="showMenu" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </div>
+        <div class="right-menu">
+            <a href="pages/cart.html" aria-label="Go to Cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+            <button type="submit">Sign In</button>
+        </div>
     </div>
-    
+    <input type="checkbox" id="showMenu" role="button" aria-pressed="true">
+    <ul class="menu" aria-label="Main Menu">
+        <li>
+            <a href="pages/recipes.html">RECIPES</a>
+        </li>
+        <li>
+            <a href="pages/tips.html">TIPS &amp; TRICKS</a>
+        </li>
+        <li>
+            <a href="pages/products.html">PRODUCTS</a>
+        </li>
+        <li id="ourCompanyLink">
+            <a href="javascript:void(0);" aria-label="Open Our Company Submenu">OUR COMPANY</a>
+            <ul class="subMenu" aria-label="Submenu">
+                <li><a href="pages/about.html">ABOUT US</a></li>
+                <li><a href="pages/contact.html">CONTACT US</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="pages/account.html">MY ACCOUNT</a>
+        </li>
+    </ul>
+</nav>
+
+    </header>
+
+    <!-- Search Bar Section -->
+    <section class="search-bar">
+       <button type="submit" aria-label="Search Button">
+                <i class="fa-solid fa-search"></i>
+            </button>
+        <form action="/search" method="GET" aria-label="Search Recipes">
+            <input type="text" name="q" placeholder="Search Your Recipes" aria-label="Search input" />
+            
+        </form>
+    </section>
     
    
   
