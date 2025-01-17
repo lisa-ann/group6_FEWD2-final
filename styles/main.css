@@ -349,38 +349,61 @@ legend {
     8. MEDIA QUERIES
  ******************************************************/
 
-@media screen and (max-width: 768px) {
-    header .header {
-        flex-direction: column;
-        align-items: flex-start;
+@media screen and (min-width: 768px) {
+    .menu {
+        justify-content: flex-start;  /* Align menu items side by side */
+        padding-right: 1rem;
+        position: static;
+        
     }
 
-    .menu {
+    nav ul.menu li{
+        gap:5rem;
+    }
+    nav input[type=checkbox]:checked ~ ul.menu {
+    display: flex;
+  
+}
+    
+    .menu a {
+        font-size: 1.2rem;  /* Adjust font size if necessary */
+    }
+
+    /* Show the .menu items side by side */
+    nav ul.menu {
+        display: flex;
+        flex-direction: row;  /* Align menu items horizontally */
+      /* Space between menu items */
+    }
+
+    /* Hide hamburger menu after 768px */
+    .showMenu {
         display: none;
     }
 
-    #showMenu:checked + .menu {
+    .subMenu {
+        display: none;
+    }
+
+    .menu button { 
         display: block;
+        background-color: var(--secondary-color);
+        height: 2.5rem;
+        width: 5rem;
+        display: flex;
+        justify-content: center;  /* Horizontally center */
+        align-items: center;      /* Vertically center */
+    }
+    .header{
+        justify-content: space-between;
+       
     }
 
-    .hero h1 {
-        font-size: 2.6rem;
+    .header button{display: flex;}
+    .header li{
+        margin:1rem;
     }
-
-    .recipe-carousel, .tips-carousel {
-        flex-direction: column;
-    }
-
-    .recipe-card, .tip-card {
-        width: 100%;
-    }
-
-    footer .end-logo {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-}
+    div .menu i{ font-size: 2.5rem}
 
 
 /* tips and tricks page css */
