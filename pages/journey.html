@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty.co</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html" aria-label="Go to Tasty.co Home">
+                        <img src="../images/logo.png" alt="Tasty.co Home">
+                    </a>
+                </div>
+                <!-- Inside the header, adjust the <nav> part -->
+                <input type="checkbox" id="showMenu">
+                <ul class="menu" aria-label="Main Menu">
+                    <li><a href="pages/../recipes.html">RECIPES</a></li>
+                    <li><a href="../pages/tips.html">TIPS &amp; TRICKS</a></li>
+                    <li><a href="../pages/products.html">PRODUCTS</a></li>
+                    <li><a href="../pages/about.html">OUR COMPANY</a>
+                        <ul class="subMenu" aria-label="Submenu">
+                            <li><a href="../pages/about.html">ABOUT US</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../pages/contact.html">CONTACT US</a></li>
+                </ul>
+                <div class="menu">
+                    <button type="submit">Sign In</button>
+                    <a href="pages/cart.html" aria-label="Go to Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                    <label for="showMenu" class="showMenu" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="search-bar">
+        <button type="submit" aria-label="Search Button">
+            <i class="fa-solid fa-search"></i>
+        </button>
+        <form action="/search" method="GET" aria-label="Search Recipes">
+            <input type="text" name="q" placeholder="Search Your Recipes" aria-label="Search input" />
+        </form>
+    </section>
+
+    <!-- OUR JOURNEY -->
+    <section class="journey">
+        <h2>Our Journey</h2>
+        <ul>
+            <li><a href="#">2021: Launched Website and Recipes</a></li>
+            <li><a href="#">2022: Reached 500K Visitors</a></li>
+            <li><a href="#">2023: Added a New Recipe Category</a></li>
+            <li><a href="#">2024: Featured in Foodie Magazine</a></li>
+        </ul>
+    </section>
+
+    <section class="header-mission">
+        <h1>2024: Featured in "Top 10 Recipe Blogs to Follow" by Foodie Magazine</h1>
+    </section>
+
+    <article class="magazine">
+        <p>To expand on your feature in Foodie Magazine's "Top 10 Recipe Blogs to Follow", you can build out the section with more detailed content that highlights your achievements, process, and impact. Here's a more comprehensive version: 2024: Featured in "Top 10 Recipe Blogs to Follow" by Foodie Magazine. In 2024, we were thrilled to be recognized by Foodie Magazine as one of the “Top 10 Recipe Blogs to Follow.” This prestigious accolade is a testament to our dedication to creating a unique, engaging, and accessible platform for food enthusiasts worldwide.</p>
+        <h3>Why We Were Selected</h3>
+        <p>Foodie Magazine praised our approach to recipe blogging, spotlighting several aspects that set us apart:</p>
+        <h4>Commitment to Health-Conscious Living:</h4>
+        <ul>
+            <li>Our recipes reflect a focus on wellness, featuring keto-friendly, organic, and low-sugar options that cater to diverse dietary preferences.</li>
+            <li>Each dish is carefully crafted to balance flavor with nutritional value, ensuring that healthy eating is both satisfying and delicious.</li>
+        </ul>
+        <h4>Innovative Recipe Development</h4>
+        <ul>
+            <li>We’re known for reimagining traditional dishes with a modern twist, incorporating unexpected ingredients and techniques to elevate everyday cooking.</li>
+            <li>For example, our <a href="#">Avocado Chocolate Mousse</a> and <a href="#">Zucchini Noodles Alfredo</a> have become fan favorites for their creativity and simplicity.</li>
+        </ul>
+        <h4>Engaging and Informative Content:</h4>
+        <ul>
+            <li>The vibrant, high-quality photography accompanying our recipes was highlighted as a major draw for readers. Each image tells a story, capturing the essence of the dish and inspiring home cooks to recreate it.</li>
+        </ul>
+        <h4>Engaging and Informative Content:</h4>
+        <ul>
+            <li>Our step-by-step instructions, paired with helpful cooking tips, ensure that even complex recipes feel manageable.</li>
+            <li>The magazine also commended our educational blog posts that teach techniques like fermenting, roasting, and meal prepping.</li>
+        </ul>
+        <h5>Recognized in Foodie Magazine's March 2024 Edition.</h5>
+    </article>
+
+</body>
+
+</html>
