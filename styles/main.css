@@ -380,3 +380,12 @@ legend {
         gap: 10px;
     }
 }
+
+
+/* tips and tricks page css */
+
+#signup-form {
+    border: var(--highlight-color);
+    background-color (--highlight-color);
+}
+
