@@ -1,25 +1,4 @@
 /*******************************************************
-    Project Details
-    Authors: Lisa Silva, KC Wilson, Leyla Atan, Lu Zhang
-    Project: Tasty.co Group 6 Final
-    Version: 1.1
-    Last updated: 1/21/2025
-
-    ------------------------
-    TABLE OF CONTENTS
-    ------------------------
-        1. VARIABLES
-        2. GLOBAL STYLES
-        3. HEADER & NAV
-        4. MAIN BODY CONTENT
-        5. GENERIC SELECTORS
-        6. FOOTER
-        7. FORMS
-        8. MEDIA QUERIES
-
-*******************************************************/
-
-/*******************************************************
     1. VARIABLES
  ******************************************************/
 :root {
@@ -38,7 +17,7 @@ html {
     font-size: 10px;
 }
 body {
-    background-color: var(--light-color);
+    background-color:white;
     color: var(--dark-color);
     font-family: "Assistant", sans-serif;
     line-height: 1.5;
@@ -83,7 +62,6 @@ a:hover {
 }
 img {
     height: auto;
-    max-width: 100%;
 }
 ol li {
     list-style: decimal;
@@ -94,45 +72,137 @@ ol li {
  ******************************************************/
 header {
     background-color: var(--primary-color);
-    padding: 2rem 1rem;
+    padding: 1rem 20px;
     text-align: center;
 }
-header img {
-    width: 98px;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-nav a, nav a:visited, label i  {
+.header button{display: none;}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu a, .menu label {
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+.menu li a{
+    font-size: 1.5rem;
+    margin:0;
+    font-weight: bold
+}
+
+header img {
+    width: 150px;
+}
+
+nav a, nav a:visited, label i {
     color: #fff;
     text-decoration: none;
 }
-nav a:hover, footer a:hover, label i:hover  {
+
+nav a:hover, footer a:hover, label i:hover {
     color: var(--highlight-color);
     text-decoration: none;
 }
+
 nav a {
     display: block;
 }
+
 nav ul li {
-    padding: .5rem;
+    padding: 0.5rem;
 }
+
 nav ul.menu {
     display: none;
 }
+
 nav input[type=checkbox]:checked ~ ul.menu {
     display: block;
+  
 }
+
 nav input[type=checkbox] {
     display: none;
 }
+
 .showMenu {
     cursor: pointer;
     display: block;
     padding: .3em;
-}
-.showMenu, nav li {
     background-color: var(--primary-color);
     color: #fff;
+}
+
+nav ul.menu li {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: .5rem;
     text-align: center;
 }
+
+nav ul.menu li a {
+    color: white;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav ul.menu li:hover {
+    background-color: var(--secondary-color);
+}
+
+nav input[type=checkbox] {
+    display: none; /* Hide the checkbox */
+}
+
+/* Submenu */
+nav ul.menu .subMenu {
+    display: none; /* Hide submenu by default */
+}
+
+nav ul.menu li:hover .subMenu {
+    display: block; /* Show submenu on hover */
+}
+
+nav ul.menu .subMenu li {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: left;
+}
+
+/* Search bar */
+.search-bar {
+    display: flex;
+    background-color: white;
+    height: 70px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input[type=text] {
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.search-bar button {
+    margin: 15px;
+    background-color: white;
+    color: #938C8C;
+    font-size: 20px;
+    margin-left: 30px;
+    padding: 0 10px;
+}
+
 /*******************************************************
     4. MAIN BODY CONTENT
  ******************************************************/
@@ -140,17 +210,254 @@ nav input[type=checkbox] {
 main section {
     margin: 2rem;
 }
+
 .text-center {
     text-align: center;
 }
+
 .text-bold {
     font-weight: bold;
 }
 
-/*******************************************************
-    5. GENERIC SELECTORS
- ******************************************************/
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
 
+.heroImg img {
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    font-size: 3.6rem;
+    margin-top: 20px;
+}
+
+.hero a {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Latest Recipes Section */
+.latest-recipes {
+    margin-top: 3rem;
+}
+
+.recipe-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Tips & Tricks Section */
+.tips-tricks {
+    margin-top: 3rem;
+}
+
+.tips-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.tip-card {
+    width: 300px;
+    text-align: center;
+}
+
+.tip-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.tip-card h3 {
+    font-size: 1.8rem;
+}
+
+.tip-card p {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+/* Products Section */
+.products {
+    margin-top: 3rem;
+}
+
+.cookbooks, .cookware {
+    margin-top: 2rem;
+}
+
+.book-card img, .cooker-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/*******************************************************
+    about-us page
+ ******************************************************/
+/* General Styles */
+
+
+.header-mission h1 {
+    margin: 0;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    background-color:var(--highlight-color);
+    padding: 1rem;
+    text-align: center;
+    margin:3rem 0;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Mission Section */
+.mission {
+    background-image: url('../images/about-us-images/header-background.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: black;
+}
+
+.mission-content p {
+    background-color: rgba(242, 240, 240, 0.8);
+    padding: 3rem;
+    display: inline-block;
+    margin-top:0;
+   
+}
+
+/* Journey Section */
+
+.journey h2 {
+    color: black;
+    margin: 2rem 0;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center; 
+}
+
+.journey ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.journey li a{
+    font-size: 1.2rem;
+    color: black;
+    margin-left: 2rem;
+}
+.journey li a:hover{
+    color:var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Team Section */
+.team {
+    text-align: center;
+    margin: 3rem 0;
+    padding-bottom: 2rem;
+    
+    
+}
+
+
+.team-member {
+    background-color: #D9D9D9;
+    margin: 3rem auto;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    text-align: left;
+    display: flex;
+    gap: 2rem;
+    display: block;
+    text-align: center;
+    margin-top: 5rem;
+}
+.team-section{
+    display: flex;
+}
+
+.team-member img {
+    width: 200px;
+    height: auto;
+/*    border-radius: 50%;*/
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #333;
+    font-family: sans-serif;
+    padding-bottom: 1rem
+}
+
+.team-member p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    text-align: left;
+    padding-left: 2rem;
+    color: black;
+    
+}
+/********MAGAZINE-PAGE*******************************************************************/
+
+
+.magazine{
+    padding:2rem 4rem;
+}
+
+
+.magazine ul{
+    list-style-type: circle;
+    margin-left: 3rem;
+}
+.magazine h3,h4{
+    font-family: sans-serif;
+    color: black;
+    margin: 3rem 0;
+
+}
+.magazine h5{
+    font-family: sans-serif;
+    font-size: 1rem;
+    margin: 4rem;
+    text-align: end;
+
+}
+
+
+
+
+
+
+
+
+/* Advertisement Section */
+.ad {
+    text-align: center;
+    margin-top: 3rem;
+}
 
 /*******************************************************
     6. FOOTER
@@ -158,17 +465,41 @@ main section {
 footer {
     background-color: var(--primary-color);
     color: #fff;
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
 }
+
 footer a, footer a:visited {
     color: #fff;
     padding: .6em;
 }
+
 footer a:hover {
     color: var(--highlight-color);
     text-decoration: none;
 }
+
+footer i {
+    font-size: 2rem;
+    margin: 0 10px;
+}
+
+.end-logo img {
+    width: 100px;
+    padding-right: 15px;
+}
+
+.end-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.end-logo p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
 /*******************************************************
     7. FORMS
  ******************************************************/
@@ -181,12 +512,15 @@ input[type=submit], button {
     margin: 1rem auto;
     padding: 1rem;
     text-align: center;
+    font-weight: bold
 }
+
 input[type=submit]:hover, button:hover {
     background-color: var(--secondary-color);
     color: #fff;
     cursor: pointer;
 }
+
 input[type=text], input[type=number], input[type=email], input[type=tel], textarea, select {
     border: 1px solid var(--dark-color);
     margin: 1rem 0 2rem;
@@ -194,21 +528,162 @@ input[type=text], input[type=number], input[type=email], input[type=tel], textar
     width: 90%;
     display: block;
 }
+
 fieldset {
     border: 1px dashed var(--primary-color);
     margin: 2rem 0;
     padding: 2rem;
 }
+
 legend {
     color: var(--primary-color);
 }
+
 /*******************************************************
     8. MEDIA QUERIES
  ******************************************************/
 
-@media screen and (min-width: 800px) {
-    header > * {
-        max-width: 1200px;
-        margin: auto;
+@media screen and (min-width: 768px) {
+    .menu {
+        justify-content: flex-start;  /* Align menu items side by side */
+        padding-right: 1rem;
+        position: static;
+        
     }
+
+    nav ul.menu li{
+        gap:5rem;
+    }
+    nav input[type=checkbox]:checked ~ ul.menu {
+    display: flex;
+  
 }
+    
+    .menu a {
+        font-size: 1.2rem;  /* Adjust font size if necessary */
+    }
+
+    /* Show the .menu items side by side */
+    nav ul.menu {
+        display: flex;
+        flex-direction: row;  /* Align menu items horizontally */
+      /* Space between menu items */
+    }
+
+    /* Hide hamburger menu after 768px */
+    .showMenu {
+        display: none;
+    }
+
+    .subMenu {
+        display: none;
+    }
+
+    .menu button { 
+        display: block;
+        background-color: var(--secondary-color);
+        height: 2.5rem;
+        width: 5rem;
+        display: flex;
+        justify-content: center;  /* Horizontally center */
+        align-items: center;      /* Vertically center */
+    }
+    .header{
+        justify-content: space-between;
+       
+    }
+
+    .header button{display: flex;}
+    .header li{
+        margin:1rem;
+    }
+    div .menu i{ font-size: 2.5rem}
+
+/***********ABOUT-US*******************************************************/
+p{font-size: 2rem;}
+
+    
+.journey {
+    text-align: center;
+}
+
+.journey h2 {
+    margin: 3rem 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.journey ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox for alignment */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around; /* Center the items */
+    gap: 5rem; /* Space between items */
+}
+
+.journey ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9; /* Light orange background */
+    border-radius: 50%; /* Makes the background round */
+    width: 250px; /* Fixed width for round shape */
+    height: 250px; /* Fixed height for round shape */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.journey ul li:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    background-color: var(--highlight-color); /* Change background color on hover */
+}
+
+.journey ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight:600;
+    transition: color 0.3s ease;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.team{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/************OUR-JOURNEY*************************************************************/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
