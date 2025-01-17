@@ -2,11 +2,11 @@
     1. VARIABLES
  ******************************************************/
 :root {
-    --highlight-color: #FFD517; /* yellow */
-    --light-color: #E0DACC;     /* cream */
+    --highlight-color: #ffD84c; /* yellow */
+    --light-color: #e0dacc;     /* cream */
     --dark-color: #737373;      /* gray */
-    --primary-color: #0E51AC;   /* blue */
-    --secondary-color: #65B504; /* green */
+    --primary-color: #2251a7;   /* blue */
+    --secondary-color: #65b504; /* green */
 }
 
 /*******************************************************
@@ -384,8 +384,20 @@ legend {
 
 /* tips and tricks page css */
 
-#signup-form {
+.signup-form {
     border: var(--highlight-color);
-    background-color (--highlight-color);
+    background-color: var(--highlight-color);
+    width: 100%;
+}
+
+.signup-news {
+    border: var(--highlight-color);
+    background-color: var(--highlight-color);
+    width: 100%;
+}
+
+.tipsAuthors {
+    border: solid 2 px black;
+    background-color: var(--)
 }
 
