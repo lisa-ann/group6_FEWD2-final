@@ -3,7 +3,7 @@
  ******************************************************/
 :root {
     --highlight-color: #ffD84c; /* yellow */
-    --light-color: #e0dacc;     /* cream */
+    --light-color: #fff;     /* white */
     --dark-color: #737373;      /* gray */
     --primary-color: #2251a7;   /* blue */
     --secondary-color: #65b504; /* green */
@@ -379,25 +379,50 @@ legend {
         flex-direction: column;
         gap: 10px;
     }
+    
 }
 
 
 /* tips and tricks page css */
 
-.signup-form {
-    border: var(--highlight-color);
-    background-color: var(--highlight-color);
-    width: 100%;
+#tipsTricks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    min-width: 300px;
+    margin: auto;
+    
 }
 
-.signup-news {
-    border: var(--highlight-color);
-    background-color: var(--highlight-color);
-    width: 100%;
+#tipsTricks h3 {
+    color: black;
+    font: 2rem "Assistant", sans-serif;
+}
+#signupTips {
+    color: black;
 }
 
-.tipsAuthors {
-    border: solid 2 px black;
-    background-color: var(--)
+.signup-form , .signup-news {
+    color: black;
+    background-color: rgba(255,216,76,.25);
+    width: 100%;
+    padding: 20px;
 }
+
+.tipsAuthor, .tipsReader {
+    color: black;
+    background-color: rgba(252,140,0,.25);
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+
+
 
