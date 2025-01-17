@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,42 +11,134 @@
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/main.css">
+
 </head>
 
-<body>
+    <body>
     <header>
         <nav>
-          <div class="header">
-           <div class="logo">
-            <a href="../index.html"><img src="../images/logo.png" alt="Tasty.co Home"></a>
+            <div class="header">
+                <div class="logo">
+                    <a href="../index.html" aria-label="Go to Tasty.co Home">
+                        <img src="../images/logo.png" alt="Tasty.co Home">
+                    </a>
+                </div>
+                <!-- Inside the header, adjust the <nav> part -->
+<input type="checkbox" id="showMenu" aria-label="Show menu" checked>
+<ul class="menu" aria-label="Main Menu">
+    <li><a href="pages/../recipes.html">RECIPES</a></li>
+    <li><a href="../pages/tips.html">TIPS &amp; TRICKS</a></li>
+    <li><a href="../pages/products.html">PRODUCTS</a></li>
+    <li><a href="../pages/about.html">OUR COMPANY</a>
+        <ul class="subMenu" aria-label="Submenu">
+            <li><a href="../pages/about.html">ABOUT US</a></li>
+        </ul>
+    </li>
+    <li><a href="../pages/contact.html">CONTACT US</a></li>
+</ul>
+<div class="menu">
+    <button type="submit">Sign In</button>
+    <a href="pages/cart.html" aria-label="Go to Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </a>
+    <label for="showMenu" class="showMenu" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+</div>
+                
             </div>
-            <div class="menu">
-            <a href="pages/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-            <label for="showMenu" class="showMenu"><i class="fa-solid fa-bars"></i></label>
-            </div>
-            </div>
-            <input type="checkbox" id="showMenu" role="button" aria-pressed="true">
-            <ul class="menu">
-                <li><a href="pages/recipes.html">RECIPES</a></li>
-                <li><a href="pages/tips.html">TIPS &AMP; TRICKS</a></li>
-                <li><a href="pages/products.html">PRODUCTS</a></li>
-                <li><a href="pages/account.html">MY ACCOUNT</a></li>
-                <li><a href="index.html">OUR COMPANY</a>
-                    <ul class="subMenu">
-                        <li><a href="pages/about.html">ABOUT US</a></li>
-                        <li><a href="pages/contact.html">CONTACT US</a></li>
-                    </ul>
-                </li>
-            </ul>
+            
+            
         </nav>
+        
     </header>
+<!--      OUR MISSION SECTION-->
+       <section class="search-bar">
+        <button type="submit" aria-label="Search Button">
+            <i class="fa-solid fa-search"></i>
+        </button>
+        <form action="/search" method="GET" aria-label="Search Recipes">
+            <input type="text" name="q" placeholder="Search Your Recipes" aria-label="Search input" />
+        </form>
+    </section>
+        <section class="header-mission">
+        <h1>Our Mission</h1>
+        </section>
     
-<!--    serach bar-->
-  <div class="search-bar">
-   <button type="submit"><i class="fa-solid fa-search"></i></button>
-    <form action="/search" method="GET">
-    <input type="text" name="q" placeholder="Search Your Recipes" />
-    </form>
-    </div>
+
+    <section class="mission">
+        <div class="mission-content">
+            <p>
+                Our mission is to inspire and empower food lovers to create delicious, healthy, and memorable meals. Through unique recipes, creative twists, and a focus on fresh, wholesome ingredients, we aim to make cooking accessible, enjoyable, and a journey of discovery for every home chef. Whether you're seeking indulgent treats, quick weeknight dinners, or adventurous flavors, we're here to bring the joy of cooking to your kitchen.
+            </p>
+        </div>
+    </section>
+
+    <section class="journey">
+        <h2>Our Journey</h2>
+        <ul>
+            <li><a href="#">2021: Launched Website and Recipes</a></li>
+            <li><a href="#">2022: Reached 500K Visitors</a></li>
+            <li><a href="#">2023: Added a New Recipe Category</a></li>
+            <li><a href="../pages/journey.html">2024: Featured in Foodie Magazine</a></li>
+        </ul>
+    </section>
     
-    
+    <section class="header-mission">
+        <h1>Meet Our Team</h1>
+        </section>
+
+    <section class="team">
+        
+
+        <div class="team-member">
+            <h3>Head Chef & Recipe Innovator</h3>
+            <section class="team-section">
+           <figure>
+            <img src="../images/about-us-images/staffSophiaSittingRev.jpg" alt="Sophia Green">
+            <figcaption>Sophia Green</figcaption>
+            </figure>
+            
+            <p>Sophia brings years of culinary expertise to our team, crafting innovative recipes that merge tradition with modern flavors. Her passion for sustainable cooking shines in every dish she creates. Favorite dish? Anything with fresh truffles!</p>
+            </section>
+        </div>
+
+        <div class="team-member">
+           <h3>Content Writer & Editor</h3><section class="team-section">
+           <figure>
+            <img src="../images/about-us-images/staffStandingRev.jpg" alt="Lila Carter">
+            <figcaption>Lila Carter</figcaption>
+            </figure>
+            <p>Lila spices up our site with her engaging content, writing recipes and stories that inspire home chefs. A wordsmith with a foodie soul, she can turn any dish into a narrative masterpiece. Top pick? A classic tiramisu.</p>
+            </section>
+        </div>
+
+        <div class="team-member">
+           <h3>Food Photographer</h3>
+           <section class="team-section">
+           <figure>
+            <img src="../images/about-us-images/staffManRev.jpg" alt="Ethan Rivera">
+            <figcaption>Ethan Rivera</figcaption>
+            </figure>
+            <p>Ethan’s vibrant food photography makes every dish leap off the screen. With an eye for detail and a love for storytelling, he captures the heart of every recipe. His favorite cuisine to photograph? Mediterranean!</p>
+            </section>
+        </div>
+
+        <div class="team-member">
+           <h3>Nutrition Expert</h3>
+           <section class="team-section">
+           <figure>
+            <img src="../images/about-us-images/staffHeadshotRev.jpg" alt="Amara Patel">
+            <figcaption>Amara Patel</figcaption>
+            </figure>
+            
+            <p>Amara helps create balanced recipes that taste as good as they are for you. With a focus on wholesome, nutrient-packed meals, she’s our go-to for healthy twists. Her kitchen favorite? Lentil coconut curry.</p>
+            </section>
+        </div>
+    </section>
+</body>
+</html>
+
+   
+  
+ 
