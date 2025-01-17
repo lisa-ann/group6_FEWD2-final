@@ -36,14 +36,14 @@
             </div>
             <input type="checkbox" id="showMenu" role="button" aria-pressed="true">
             <ul class="menu" aria-label="Main Menu">
-                <li><a href="../pages/recipes.html">RECIPES</a></li>
-                <li><a href="../pages/tips.html">TIPS &amp; TRICKS</a></li>
-                <li><a href="../pages/products.html">PRODUCTS</a></li>
-                <li><a href="../pages/account.html">MY ACCOUNT</a></li>
+                <li><a href="pages/recipes.html">RECIPES</a></li>
+                <li><a href="pages/tips.html">TIPS &amp; TRICKS</a></li>
+                <li><a href="pages/products.html">PRODUCTS</a></li>
+                <li><a href="pages/account.html">MY ACCOUNT</a></li>
                 <li><a href="../index.html">OUR COMPANY</a>
                     <ul class="subMenu" aria-label="Submenu">
                         <li><a href="../pages/about.html">ABOUT US</a></li>
-                        <li><a href="../pages/contact.html">CONTACT US</a></li>
+                        <li><a href="pages/contact.html">CONTACT US</a></li>
                     </ul>
                 </li>
             </ul>
@@ -63,14 +63,6 @@
 
     <!-- Main Content -->
     <main>
-        <section class="hero">
-            <picture class="heroImg">
-                <img src="images/heroPageSalad.jpg" alt="Rainbow Salad" />
-            </picture>
-            <h2>What We're Cooking Today</h2>
-            <h1>Rainbow Salad</h1>
-            <a href="#" class="recipe-link" aria-label="View Rainbow Salad Recipe">See the recipe ...</a>
-        </section>
 
         <!-- Signup Form Section -->
         <section class="signup-form">
@@ -80,92 +72,34 @@
             <p>Already have an account? <a href="#signin">Sign in here</a>.</p>
         </section>
 
-        <!-- Latest Recipes Section -->
-        <section class="latest-recipes">
-            <h2>Latest Recipes</h2>
-            <section class="recipe-carousel">
-                <article class="recipe-card">
-                    <img src="images/pumpkin-soup.jpg" alt="Pumpkin Soup" />
-                    <h3>Pumpkin Soup</h3>
-                </article>
-
-                <article class="recipe-card">
-                    <img src="images/veggie-spaghetti.jpg" alt="Veggie Spaghetti" />
-                    <h3>Veggie Spaghetti</h3>
-                </article>
-
-                <article class="recipe-card">
-                    <img src="images/banaberry-toast.jpg" alt="Banaberry Toast" />
-                    <h3>Banaberry Toast</h3>
-                </article>
-
-                <article class="recipe-card">
-                    <img src="images/passion-smoothie.jpg" alt="Passion Smoothie" />
-                    <h3>Passion Smoothie</h3>
-                </article>
-
-                <article class="recipe-card">
-                    <img src="images/egg-meets-avocado.jpg" alt="Egg Meets Avocado" />
-                    <h3>Egg Meets Avocado</h3>
-                </article>
-            </section>
+       <!-- Newsletter Signup Section -->
+        <section class="news">
+            <h2>Newsletter</h2>
+            <p>Get the Tasty newsletter <a href="#signup">Sign up here</a> </p>
+            <input type="text" placeholder="Email / Tel" aria-label="Sign up Email" />
+            <button class="submitNewsletter" aria-label="Newsletter">Newsletter submit</button>
         </section>
-
-        <!-- Tips & Tricks Section -->
-        <section class="tips-tricks">
-            <h2>Tips &amp; Tricks</h2>
-            <section class="tips-carousel">
-                <article class="tip-card">
+        
+        <!-- Tips and tricks from authors -->
+        <section class="tipsAuthor">
+            <h2>Tips and Tricks from our authors</h2>
+                <article class="tip-card-a1">
                     <img src="images/Tip1.jpg" alt="Cup cake" />
                     <h3>26 Seriously Useful Baking Tips You'll Wish You Know About Sooner</h3>
                     <p>We recently asked members of the BuzzFeed Community for their best baking tip that everyone should know. Here are some of their suggestions. <a href="#">Read More&nbsp;&raquo;</a></p>
                 </article>
-
-                <article class="tip-card">
-                    <img src="images/tip2.png" alt="Cooking Salad" />
-                    <h3>My favorite way to make Korean Spicy Cucumber Salad</h3>
-                    <p>This refreshing salad is perfect for hot summer days. The cucumbers are smashed and tossed with a tangy dressing, then topped with toasted sesame seeds and red pepper flakes for crunch and heat. <a href="#">Read More&nbsp;&raquo;</a></p>
-                </article>
-            </section>
         </section>
 
-        <!-- Products Section -->
-        <section class="products">
-            <h2>Our Products</h2>
-            <section class="cookbooks">
-                <h3>Cookbooks</h3>
-                <a href="pages/product.html" class="shop-all" aria-label="Shop All Cookbooks">Shop All</a>
-                <article class="book-card">
-                    <img src="images/book1.png" alt="Book Cover 1" />
-                    <button>Add to Cart</button>
+        <section class="tipsReader">
+            <h2>Tips and Tricks from our readers</h2>
+                <article class="tip-card-r1">
+                    <img src="images/Tip1.jpg" alt="Cup cake" />
+                    <h3>26 Seriously Useful Baking Tips You'll Wish You Know About Sooner</h3>
+                    <p>We recently asked members of the BuzzFeed Community for their best baking tip that everyone should know. Here are some of their suggestions. <a href="#">Read More&nbsp;&raquo;</a></p>
                 </article>
-
-                <article class="book-card">
-                    <img src="images/book2.png" alt="Book Cover 2" />
-                    <button>Add to Cart</button>
-                </article>
-
-                <article class="book-card">
-                    <img src="images/book3.png" alt="Book Cover 3" />
-                    <button>Add to Cart</button>
-                </article>
-            </section>
-
-            <section class="cookware">
-                <h3>Cookware</h3>
-                <a href="pages/product.html" class="shop-all" aria-label="Shop All Cookware">Shop All</a>
-                <article class="cooker-card">
-                    <img src="images/cooker1.png" alt="Cookware 1" />
-                    <button>Add to Cart</button>
-                </article>
-
-                <article class="cooker-card">
-                    <img src="images/cooker2.png" alt="Cookware 2" />
-                    <button>Add to Cart</button>
-                </article>
-            </section>
         </section>
-
+        
+        
         <!-- Advertisement Section -->
         <section class="ad">
             <h6>ADVERTISEMENT</h6>
