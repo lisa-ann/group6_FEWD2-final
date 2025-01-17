@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
- <!-- KC branch -->
+
 <body>
     <header>
         <nav>
@@ -22,39 +22,43 @@
                         <img src="images/logo.png" alt="Tasty.co Home">
                     </a>
                 </div>
-                <div class="menu">
-                    <a href="pages/cart.html" aria-label="Go to Cart">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-                    <label for="showMenu" class="showMenu" aria-label="Toggle Menu">
-                        <i class="fa-solid fa-bars"></i>
-                    </label>
-                </div>
+                <!-- Inside the header, adjust the <nav> part -->
+<input type="checkbox" id="showMenu" aria-label="Show menu" checked>
+
+<ul class="menu" aria-label="Main Menu">
+    <li><a href="pages/recipes.html">RECIPES</a></li>
+    <li><a href="pages/tips.html">TIPS &amp; TRICKS</a></li>
+    <li><a href="pages/products.html">PRODUCTS</a></li>
+    <li><a href="pages/about.html">OUR COMPANY</a>
+        <ul class="subMenu" aria-label="Submenu">
+            <li><a href="pages/about.html">ABOUT US</a></li>
+        </ul>
+    </li>
+    <li><a href="pages/contact.html">CONTACT US</a></li>
+</ul>
+<div class="menu">
+    <button type="submit">Sign In</button>
+    <a href="pages/cart.html" aria-label="Go to Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </a>
+    <label for="showMenu" class="showMenu" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+</div>
+                
             </div>
-            <input type="checkbox" id="showMenu" role="button" aria-pressed="true">
-            <ul class="menu" aria-label="Main Menu">
-                <li><a href="pages/recipes.html">RECIPES</a></li>
-                <li><a href="pages/tips.html">TIPS &amp; TRICKS</a></li>
-                <li><a href="pages/products.html">PRODUCTS</a></li>
-                <li><a href="pages/account.html">MY ACCOUNT</a></li>
-                <li><a href="index.html">OUR COMPANY</a>
-                    <ul class="subMenu" aria-label="Submenu">
-                        <li><a href="pages/about.html">ABOUT US</a></li>
-                        <li><a href="pages/contact.html">CONTACT US</a></li>
-                    </ul>
-                </li>
-            </ul>
+            
+            
         </nav>
     </header>
 
     <!-- Search Bar Section -->
     <section class="search-bar">
-       <button type="submit" aria-label="Search Button">
-                <i class="fa-solid fa-search"></i>
-            </button>
+        <button type="submit" aria-label="Search Button">
+            <i class="fa-solid fa-search"></i>
+        </button>
         <form action="/search" method="GET" aria-label="Search Recipes">
             <input type="text" name="q" placeholder="Search Your Recipes" aria-label="Search input" />
-            
         </form>
     </section>
 
@@ -195,6 +199,8 @@
             <p>&copy; BuzzFeed, Inc 2024</p>
         </section>
     </footer>
+
+   
 </body>
 
 </html>
