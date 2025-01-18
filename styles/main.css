@@ -2,11 +2,12 @@
     1. VARIABLES
  ******************************************************/
 :root {
-    --highlight-color: #FFD517; /* yellow */
-    --light-color: #E0DACC;     /* cream */
-    --dark-color: #737373;      /* gray */
-    --primary-color: #0E51AC;   /* blue */
-    --secondary-color: #65B504; /* green */
+    --highlight-color: #ffd84c; /* yellow */
+    --light-color:  #fff;       /* white */
+    --dark-color: #444;         /* gray */
+    --primary-color: #2251a7;   /* blue */
+    --secondary-color: #65b504; /* green */
+    --tertiary-color: #fc8c00;  /* orange */
 }
 
 /*******************************************************
@@ -17,13 +18,12 @@ html {
     font-size: 10px;
 }
 body {
-    background-color:white;
     color: var(--dark-color);
     font-family: "Assistant", sans-serif;
+    font-size: 1.5rem;
     line-height: 1.5;
 }
 html, body {
-    font-size: 1rem;
     height: 100%;
     width: 100%;
 }
@@ -31,21 +31,19 @@ h1, h2 {
     font-family: "Caveat", serif;
 }
 h1 {
-    color: #fff;
-    font-size: 2.6rem;
+    color:  var(--light-color);
+    text-shadow: 2px 2px var(--dark-color);
+    font-size: 3.6rem;
 }
 h2 {
-    font-size: 2rem;
+    font-size: 2.6rem;
 }
 h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 h2, h3, h4 {
     color: var(--primary-color);
     margin-top: 1.3rem;
-}
-h4, h5 {
-    font-size: 1.5rem;
 }
 h6 {
     font-weight: bold;
@@ -81,7 +79,9 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-.header button{display: none;}
+.header button{
+    display: none;
+}
 
 .menu {
     display: flex;
@@ -105,7 +105,7 @@ header img {
 }
 
 nav a, nav a:visited, label i {
-    color: #fff;
+    color:  var(--light-color);
     text-decoration: none;
 }
 
@@ -140,18 +140,18 @@ nav input[type=checkbox] {
     display: block;
     padding: .3em;
     background-color: var(--primary-color);
-    color: #fff;
+    color:  var(--light-color);
 }
 
 nav ul.menu li {
     background-color: var(--primary-color);
-    color: #fff;
+    color:  var(--light-color);
     padding: .5rem;
     text-align: center;
 }
 
 nav ul.menu li a {
-    color: white;
+    color:  var(--light-color);
     display: block;
     padding: 10px;
     text-decoration: none;
@@ -176,31 +176,33 @@ nav ul.menu li:hover .subMenu {
 
 nav ul.menu .subMenu li {
     background-color: var(--secondary-color);
-    color: #fff;
+    color:  var(--light-color);
     text-align: left;
 }
 
 /* Search bar */
 .search-bar {
     display: flex;
-    background-color: white;
-    height: 70px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .search-bar input[type=text] {
-    border: none;
-    font-size: 20px;
-    padding: 10px;
+    border: 2px solid  var(--light-color);
+    font-size: 2rem;
+    margin: 0;
+    width: 100%;
+}
+.search-bar input[type=text]:hover {
+    border: 2px solid var(--dark-color);
+    border-radius: 3px;
 }
 
 .search-bar button {
-    margin: 15px;
-    background-color: white;
-    color: #938C8C;
-    font-size: 20px;
-    margin-left: 30px;
-    padding: 0 10px;
+    background-color:   var(--light-color);
+    color:  var(--dark-color);
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 1rem;
 }
 
 /*******************************************************
@@ -208,7 +210,7 @@ nav ul.menu .subMenu li {
  ******************************************************/
 
 main section {
-    margin: 2rem;
+    padding: 2rem;
 }
 
 .text-center {
@@ -220,20 +222,16 @@ main section {
 }
 
 /* Hero Section */
-.hero {
-    text-align: center;
-    padding: 50px 20px;
+main section.hero {
+    background-color: var(--highlight-color);
 }
-
-.heroImg img {
-    width: 100%;
+.hero img {
+    border-radius: 10px;
     height: auto;
+    box-shadow: 2px 2px 2px var(--dark-color);
+    width: 100%;
 }
 
-.hero h1 {
-    font-size: 3.6rem;
-    margin-top: 20px;
-}
 
 .hero a {
     color: var(--secondary-color);
@@ -466,26 +464,28 @@ main section {
  ******************************************************/
 footer {
     background-color: var(--primary-color);
-    color: #fff;
+    color:  var(--light-color);
     padding: 2rem;
     text-align: center;
 }
 
-footer a, footer a:visited {
-    color: #fff;
-    padding: .6em;
+footer a, footer a:visited, footer h6 {
+    color:  var(--light-color);
+    padding: 1em;
 }
 
 footer a:hover {
     color: var(--highlight-color);
-    text-decoration: none;
 }
-
+footer nav a, footer a:hover {
+    text-decoration: underline;
+}
 footer i {
     font-size: 2rem;
-    margin: 0 10px;
 }
-
+footer i a:hover {
+    text-decoration: none;
+}
 .end-logo img {
     width: 100px;
     padding-right: 15px;
@@ -509,7 +509,7 @@ input[type=submit], button {
     background-color: var(--primary-color);
     border-radius: 5px;
     border: 0;
-    color: #fff;
+    color:  var(--light-color);
     font-family: "Assistant", sans-serif;
     margin: 1rem auto;
     padding: 1rem;
@@ -519,12 +519,13 @@ input[type=submit], button {
 
 input[type=submit]:hover, button:hover {
     background-color: var(--secondary-color);
-    color: #fff;
+    color:  var(--light-color);
     cursor: pointer;
 }
 
 input[type=text], input[type=number], input[type=email], input[type=tel], textarea, select {
     border: 1px solid var(--dark-color);
+    font-family: "Assistant", sans-serif;
     margin: 1rem 0 2rem;
     padding: .75rem;
     width: 90%;
@@ -582,20 +583,20 @@ legend {
     }
 
     .menu button { 
-        display: block;
         background-color: var(--secondary-color);
-        height: 2.5rem;
-        width: 5rem;
+        align-items: center;      /* Vertically center */
         display: flex;
         justify-content: center;  /* Horizontally center */
-        align-items: center;      /* Vertically center */
+    }    
+    .menu button:hover { 
+        background-color: var(--highlight-color);
+        color:  var(--primary-color);
     }
-    .header{
+    .header {
         justify-content: space-between;
        
     }
 
-    .header button{display: flex;}
     .header li{
         margin:1rem;
     }
