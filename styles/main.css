@@ -303,8 +303,6 @@ main section.hero {
 /*******************************************************
     about-us page
  ******************************************************/
-/* General Styles */
-
 
 .header-mission h1 {
     margin: 0;
@@ -423,12 +421,16 @@ main section.hero {
 
 .magazine{
     padding:2rem 4rem;
+    font-size: 1.8rem;
+
 }
+
 
 
 .magazine ul{
     list-style-type: circle;
     margin-left: 3rem;
+    font-size: 1.5rem;
 }
 .magazine h3,h4{
     font-family: sans-serif;
@@ -658,7 +660,12 @@ p{font-size: 2rem;}
     justify-content: space-evenly;
 }
 /************OUR-JOURNEY*************************************************************/
-
+    .magazine{
+        font-size: 3rem;
+    }
+    .magazine ul{
+        font-size: 2rem;
+    }
 }
 
 
