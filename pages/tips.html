@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -16,6 +15,7 @@
 </head>
 
 <body>
+    <!-- header and navigation -->
     <header>
         <nav>
             <div class="header">
@@ -43,7 +43,9 @@
                 </ul>
                 <div class="menu">
                     <button type="submit">Sign&nbsp;In</button>
-                    <a href="cartCheckOut.html" aria-label="Go to Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="pages/cart.html" aria-label="Go to Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
                     <label for="showMenu" class="showMenu" aria-label="Toggle Menu">
                         <i class="fa-solid fa-bars"></i>
                     </label>
@@ -57,9 +59,9 @@
        <button type="submit" aria-label="Search Button">
                 <i class="fa-solid fa-search"></i>
         </button>
+
         <form action="/search" method="GET" aria-label="Search Recipes">
-            <input type="text" name="q" placeholder="Search Your Recipes" aria-label="Search input" />
-            
+            <input type="text" name="q" placeholder="Search Your Recipes" aria-label="Search input">
         </form>
     </section>
 
@@ -72,16 +74,14 @@
            <h2>Want to see more recipes?</h2>
             <h3>Sign-in or create an account.</h3>
             <p>Already have an account? <a href="signIn.html">Sign in here</a>.</p>
-            <!-- <input type="text" placeholder="Email / Tel" aria-label="Sign up Email" /> -->
             <button class="create-account" class="btnSubmit" aria-label="Create Account">Create an account</button>
-            
         </section>
 
        <!-- Newsletter Signup Section -->
         <section class="signup-news" id="signupTips">
             <h2>Want the latest recipe news delivered to your inbox?</h2>
             <h3>Get the Tasty Newsletter</h3>
-            <input type="text" placeholder="Email" aria-label="Sign up Email" />
+            <input type="text" placeholder="Email" aria-label="Sign up Email">
             <button class="submitNewsletter" class="btnSubmit" aria-label="Newsletter">Newsletter submit</button>
         </section>
         
@@ -140,10 +140,9 @@
             <a href="https://www.youtube.com/buzzfeedtasty" title="Go to Tasty on Youtube" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </section>
         <section class="copyright">
-            <p>© Buzzfeed,Inc 2025</p>
+            <p>&copy; Buzzfeed,Inc 2025</p>
         </section>
     </footer>
-
 </body>
 
 </html>
