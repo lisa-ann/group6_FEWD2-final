@@ -154,7 +154,9 @@ nav .material-symbols-outlined:hover {
     .open-menu{padding: 10px;
     margin-top: -20px;
     }
-    .close-menu{position: sticky;}
+    .close-menu{
+        position: sticky;
+    }
     #check:checked~ .menu{right: 0;}
     .menu a, a:visited {
         color: var(--light-color);
@@ -284,6 +286,7 @@ nav ul.menu .subMenu li:last-child {
     width: 280px;
     height: 280px;
     border-radius: 50%;
+
 }
 .tip-card article{
     width: 400px;
@@ -514,7 +517,7 @@ footer {
     padding: 2rem;
     text-align: center;
    margin: 0 auto;
-    max-width: 1600px;
+    max-width: 1200px;
 }
 footer h2 {
     color: var(--light-color);
@@ -563,8 +566,8 @@ footer a:hover {
  ******************************************************/
 
 @media screen and (min-width:768px){
-   header, .hero, main, footer>*{
-        max-width:1600px;
+   header, .hero, .holiday-special, main, footer>*{
+        max-width:1200px;
         margin: auto;
     }
     /*Nav large*/
@@ -637,6 +640,7 @@ footer a:hover {
    }
     
     /**productPage hero large**/
+    
     .promo-content{flex-wrap:nowrap;}
     .holiday-special h1{font-size: 8rem;}
     .discount h2{font-size:8rem;}
