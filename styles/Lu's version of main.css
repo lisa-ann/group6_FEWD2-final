@@ -1,0 +1,701 @@
+/*******************************************************
+    1. VARIABLES
+ ******************************************************/
+:root {
+    --highlight-color: #ffd84c; /* yellow */
+    --light-color:  #fff;       /* white */
+    --dark-color: #444;         /* gray */
+    --primary-color: #2251a7;   /* blue */
+    --secondary-color: #65b504; /* green */
+    --tertiary-color: #fc8c00;  /* orange */
+}
+
+/*******************************************************
+    2. GLOBAL STYLES
+ ******************************************************/
+
+html {
+    font-size: 10px;
+}
+body {
+    font-family: "Assistant", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+main{margin: 0 10px;}
+
+h1 {
+    color:  var(--light-color);
+    text-shadow: 2px 2px 2px var(--dark-color);
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+
+p {
+    margin-top: 1rem;
+}
+
+img {
+    height: auto;
+}
+
+a, a:visited {
+    color: var(--secondary-color);
+}
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+ol li {
+    list-style: decimal;
+    list-style-position: inside;
+}
+/*******************************************************
+    3. HEADER & NAV
+ ******************************************************/
+header {
+    background-color: var(--primary-color);
+    position: sticky;
+      top: 0;
+    z-index: 5;
+    text-align: center;
+    box-shadow: 2px gray;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+nav .logo{margin-left: 20px;}
+.sign-in {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    font-size: 2rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-in:hover {
+    background-color: var(--highlight-color);
+    color: var(--dark-color);
+}
+
+nav .material-symbols-outlined{
+    color: var(--light-color);
+    margin-left: 5px;
+    margin-top:3px;
+}
+nav .material-symbols-outlined:hover {
+    color: var(--highlight-color);
+}
+.open-menu, .close-menu{
+    position: absolute;
+    color:aliceblue;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu{
+    top: 50%;
+    right:20px;
+    transform: translateY(-50%);
+}
+.close-menu{
+    top: 20px;
+    right: 20px;
+}
+#check{display: none;}
+.searchBar{
+    background-color: var(--light-color);
+    text-align: left;
+    width: auto;
+    height: 35px;
+    border-bottom: solid 1px gray;
+}
+.searchBar input {
+    font-size: 1.5rem;
+    width:60%;
+    border:none;
+    margin-left: 10px;
+    
+}
+@media screen and (max-width:768px){
+    .menu{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
+    }
+    ul {order: 1;}
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu, .close-menu{display: block;}
+    .open-menu{padding: 10px;
+    margin-top: -20px;
+    }
+    .close-menu{
+        position: sticky;
+        top:3;
+    }
+    #check:checked~ .menu{right: 0;}
+    .menu a, a:visited {
+        color: var(--light-color);
+        text-decoration: none;
+    }
+    .menu a:hover {
+         color: var(--highlight-color);
+         text-decoration: none;
+    }
+}
+
+/********not check yet******/
+
+/* Submenu */
+ul.menu {
+    position: relative;
+}
+nav ul.menu .subMenu {
+    left: 0;
+    position: absolute;
+    display: none;
+}
+nav ul.menu li:hover .subMenu {
+    display: block; /* Show submenu on hover */
+}
+
+nav ul.menu .subMenu li {
+    background-color: var(--secondary-color);
+    color:  var(--light-color);
+    text-align: left;
+}
+nav ul.menu .subMenu li:hover {
+    border-radius: 0;
+    text-decoration: underline;
+}
+nav ul.menu .subMenu li:first-child {
+    border-radius: 0 5px 0 0 ;
+}
+nav ul.menu .subMenu li:last-child {
+    border-radius: 0 0 5px 5px;
+}
+
+
+/*******************************************************
+    4. MAIN BODY CONTENT
+ ******************************************************/
+
+/*homepage*/
+  /**hero**/
+.hero{
+    background-color: var(--highlight-color);
+    width: 100%;
+    padding: 20px;
+}
+.heroImg, .heroText, .HomeSignup-form{
+    text-align: center;
+}
+.hero img {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 2px 2px var(--dark-color);
+    width: 80%;
+    margin: 10px;
+    border: none;
+}
+.heroText h2{
+    font-family: "Assistant", sans-serif;
+    font-size: 3rem;
+}
+.heroTitle {
+  font-family: "Caveat", serif;
+  font-size: 8rem;
+  margin-bottom: 1rem;
+}
+.HomeSignup-form{padding: 30px;}
+.HomeSignup-form p, .signBox{margin-bottom: 8px;}
+.HomeSignup-form input {
+  padding: 0.75rem;
+  width: 250px;
+  border: none;
+  border-radius: 4px;
+  margin-right: auto;
+}
+.create-account-btn, .signin-button, .submit-button{
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.hero .create-account-btn:hover, .signin-button:hover, .submit-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+
+   /**latest recipe**/
+.latest-recipes h2, .tips-tricks h2{
+    border-bottom: solid 4px #fc8c00;
+}
+.recipe-carousel{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+}
+.recipe-card{
+    padding: 20px;
+    text-align: center;
+}
+.recipe-card img{
+    width: 250px;
+    height: 200px;
+    border-radius: 5%;
+    shape-outside: border-box;
+}
+
+ /**tips**/
+ .tip-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.tip-card img{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    shape-outside: circle(50%);
+}
+.tip-card article{
+    width: 400px;
+    padding: 20px;
+}
+
+
+ /**Products Section **/
+.products h2{border-bottom: solid 4px #65b504;}
+.shopTitle, .books, .ware{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.books{
+    flex-wrap: wrap;
+    border-bottom:  solid .5px lightgray;
+}
+.book-carousel, .ware-carousel{
+    text-align: center;
+}
+.shopTitle {
+    align-items: center;
+    justify-content: space-evenly;
+}
+.shopTitle h3{font-weight: 700;}
+.book-card, .cooker-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+.book-card img{
+    width: 200px;
+    height: 250px;
+    border-radius: 5%;
+    shape-outside: border-box;
+}
+
+.add-to-cart {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px;
+}
+.add-to-cart:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+/* Products page */
+   /**productPage hero**/
+.holiday-special{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+}
+.holiday-special h1{
+    font-family: "Caveat", serif;
+    font-size: 6rem;
+    color: #eb4034;
+    text-align: center;
+}
+.promo-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+    margin: 20px;
+}
+.discount{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.discount h2{
+    font-size:6rem;
+    font-weight: 800;
+    color:var(--primary-color);
+    text-align: center;
+}
+.discount h3{
+    font-size:4rem;
+    font-weight: 600;
+    color:var(--light-color);
+    text-align: center;
+}
+.discount a{align-self: flex-end;}
+.discount a, .signup-form a{
+    color:#ffd84c;
+}
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.signup-form{
+     display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.signup-form p, .signBox{margin-bottom: 20px;}
+.signup-form input {
+  padding: 0.75rem;
+  width: 250px;
+  border: none;
+  border-radius: 4px;
+  margin-right: auto;
+}
+
+.create-account-btn{
+    width: 200px;
+    align-self: center;
+    margin-top: 20px;
+}
+.create-account-btn:hover {
+    background-color: #ffd84c;
+    color: var(--dark-color);
+}
+
+   /** product section**/
+.products { border-bottom:solid 4px #ffd84c; }
+   /**product categories**/
+.product-categories{
+    margin: 10px;
+    gap:10px;
+}
+.product-grid, .form-row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:10px;
+}
+.product-grid h3{
+    font-size:1.5rem;
+    font-weight: bold;
+}
+.productImg{
+    width: 50%;
+    gap:20px;
+}
+
+.product-info{
+    width: 80%;
+}
+.product-grid{
+    padding: 10px;
+    border-bottom: solid .5px lightgray;
+}
+.price {
+    font-weight: bold;
+    float: right;
+}
+
+
+
+/*contact us page*/
+.contactUSpage{margin: 30px;}
+.contactUSpage h2{
+     font-family: "Caveat", serif;
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+.contactUSpage h3{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.signin-section{margin-bottom: 40px;}
+
+.signin-form, .contact-form{
+    background-color: #ede8e8;
+    font-size: 2rem;
+    font-weight: 80;
+    padding: 30px;
+    border-radius: 6px;
+}
+.diet-type, .meals-type{
+    border-bottom: dashed .8px gray;
+    margin-bottom: 30px;
+}
+.radio-group, .checkbox-group{
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+.radio-group label, .checkbox-group label{padding: 20px;}
+.signin-form p{
+    color: gray;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+#message{border: none;}
+.signin-button, .submit-button{
+    text-align: center;
+    width:95%;
+}
+
+
+/*empty cart page*/
+.empty-cart{
+    text-align: center;
+}
+
+/*Ads*/
+.ad{text-align: center;}
+.ad h2{
+    font-size:1.5rem;
+    color: #444;
+}
+
+
+
+/*******************************************************
+    6. FOOTER
+ ******************************************************/
+footer {
+    background-color: var(--primary-color);
+    color:  var(--light-color);
+    padding: 2rem;
+    text-align: center;
+   margin: 0 auto;
+    max-width: 1600px;
+}
+footer h2 {
+    color: var(--light-color);
+    margin-bottom: 1rem;
+}
+.customer-service, .payment-method, .social-media {
+    align-self: center;
+    margin-bottom: 30px;
+}
+.customer-service li{
+    padding: 10px;
+    font-size: 2rem;
+}
+.payment-icons, .social-icons {
+    display: flex;
+    justify-content: space-around;
+}
+.payment-icons{
+    margin: 20px;
+    flex-wrap: wrap;}
+    
+.payment-icons img{margin: 0 20px;}
+.social-icons svg{width: 30%;}
+
+footer a, footer a:visited {
+    color:  var(--light-color);
+}
+
+footer a:hover {
+    color: var(--highlight-color);
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;ß
+}
+.copyright p {
+    font-size: 1.5rem;
+    margin: 0;
+    align-self: center;
+}
+
+/*******************************************************
+    7.Responsive design
+ ******************************************************/
+
+@media screen and (min-width:768px){
+   header, .hero, main, footer>*{
+        max-width:1600px;
+        margin: auto;
+    }
+    /*Nav large*/
+    .nav-menu {
+    display: flex;
+    list-style: none;
+    gap:30px;
+    }
+
+   .nav-menu a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+   .nav-menu a:hover {
+    color: var(--highlight-color);
+}
+    .material-symbols-outlined{margin-right: 30px;}
+    /**homepage hero large**/
+  .hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+  .heroImg{
+    grid-column: 1/2;
+    grid-row: 1/3;  
+   }
+  .heroText{
+    grid-column: 2/3;
+    grid-row: 1/2;
+   }
+  .HomeSignup-form{
+    grid-column: 2/3;
+    grid-row: 2/3;
+   }
+  .heroText, HomeSignup-form{
+    padding: 30px;
+   }
+  .recipe-link {
+  color: #65b504;
+  text-decoration: none;
+  margin-left: 300px;
+  }
+  .HomeSignup-form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+   }
+  .sign-in-text{
+    margin-left: 200px;
+   }
+    
+    /**recipe section large**/
+  .recipe-carousel{ flex-wrap: nowrap;}
+  .tips-carousel{display: flex;}
+    
+    /**Products Section large **/
+    .products-carousel {
+        display: flex;
+        gap:8rem;
+    }
+   .books{
+    flex-wrap: nowrap;
+    border-bottom: none;
+   }
+    
+    /**productPage hero large**/
+    .promo-content{flex-wrap:nowrap;}
+    .holiday-special h1{font-size: 8rem;}
+    .discount h2{font-size:8rem;}
+    .discount h3{font-size:6rem;}
+    
+    /**product categories large**/
+    .category-cookbooks, .product-actions, .category-cookware{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .product-grid{
+        width: 800px;
+        border-bottom:none;
+    }
+    .product-info{
+        width: 60%;
+        padding: 20px;
+    }
+    .product-actions{
+    width: 400px;
+    margin: 10px;
+}
+    .category-cookbooks, .category-cookware{border-bottom: solid .5px lightgray;}
+    
+    /**contact us page large**/
+    .contactUSpage{
+       display: flex;
+       justify-content: space-around;
+       padding: 20px;
+       margin: 20px;
+    }
+
+    /*Ads large*/
+    
+    /*footer large*/
+    .footer-content{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    .customer-service{
+      grid-column: 1/2;
+      grid-row: 1/3;  
+     }
+    .payment-method{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        flex-wrap: nowrap;
+    }
+    .social-media{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    }   
+}
