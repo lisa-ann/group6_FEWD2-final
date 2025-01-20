@@ -74,7 +74,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 nav .logo{margin-left: 20px;}
@@ -270,8 +270,8 @@ nav ul.menu .subMenu li:last-child {
     text-align: center;
 }
 .recipe-card img{
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: 150px;
     border-radius: 5%;
 }
 
@@ -283,14 +283,14 @@ nav ul.menu .subMenu li:last-child {
     padding: 20px;
 }
 .tip-card img{
-    width: 280px;
-    height: 280px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 
 }
 .tip-card article{
-    width: 400px;
-    padding: 20px;
+    width: 350px;
+    padding: 15px;
 }
 
 
@@ -317,11 +317,16 @@ nav ul.menu .subMenu li:last-child {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 20px;
+    padding: 5px;
 }
-.book-card img{
+.book-card img, .productImg img{
     width: 200px;
     height: 250px;
+    border-radius: 5%;
+}
+.cooker-card img{
+    width: 200px;
+    height: 200px;
     border-radius: 5%;
 }
 
@@ -420,22 +425,22 @@ a:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap:10px;
+    gap:5px;
 }
 .product-grid h3{
     font-size:1.5rem;
     font-weight: bold;
 }
-.productImg{
-    width: 50%;
-    gap:20px;
+.productImg img{
+    width: 150px;
+    height: 200px;
+    border-radius: 5%;
 }
-
 .product-info{
     width: 80%;
 }
 .product-grid{
-    padding: 10px;
+    padding: 5px;
     border-bottom: solid .5px lightgray;
 }
 .price {
@@ -446,7 +451,9 @@ a:hover {
 
 
 /*contact us page*/
-.contactUSpage{margin: 30px;}
+.contactUSpage{
+    max-width: 1200px;
+}
 .contactUSpage h2{
      font-family: "Caveat", serif;
     font-size: 4rem;
@@ -516,7 +523,7 @@ footer {
     color:  var(--light-color);
     padding: 2rem;
     text-align: center;
-   margin: 0 auto;
+    margin: 0 auto;
     max-width: 1200px;
 }
 footer h2 {
@@ -589,6 +596,7 @@ footer a:hover {
     color: var(--highlight-color);
 }
     .material-symbols-outlined{margin-right: 30px;}
+    
     /**homepage hero large**/
   .hero{
     display: grid;
@@ -671,11 +679,9 @@ footer a:hover {
        display: flex;
        justify-content: space-around;
        padding: 20px;
-       margin: 20px;
+       margin: auto;
     }
 
-    /*Ads large*/
-    
     /*footer large*/
     .footer-content{
       display: grid;
