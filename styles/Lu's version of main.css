@@ -69,7 +69,6 @@ header {
       top: 0;
     z-index: 5;
     text-align: center;
-    box-shadow: 2px gray;
 }
 nav {
     display: flex;
@@ -155,10 +154,7 @@ nav .material-symbols-outlined:hover {
     .open-menu{padding: 10px;
     margin-top: -20px;
     }
-    .close-menu{
-        position: sticky;
-        top:3;
-    }
+    .close-menu{position: sticky;}
     #check:checked~ .menu{right: 0;}
     .menu a, a:visited {
         color: var(--light-color);
@@ -275,7 +271,6 @@ nav ul.menu .subMenu li:last-child {
     width: 250px;
     height: 200px;
     border-radius: 5%;
-    shape-outside: border-box;
 }
 
  /**tips**/
@@ -289,7 +284,6 @@ nav ul.menu .subMenu li:last-child {
     width: 280px;
     height: 280px;
     border-radius: 50%;
-    shape-outside: circle(50%);
 }
 .tip-card article{
     width: 400px;
@@ -326,7 +320,6 @@ nav ul.menu .subMenu li:last-child {
     width: 200px;
     height: 250px;
     border-radius: 5%;
-    shape-outside: border-box;
 }
 
 .add-to-cart {
@@ -557,7 +550,7 @@ footer a:hover {
 .copyright {
     display: flex;
     justify-content: center;
-    align-items: center;ß
+    align-items: center;
 }
 .copyright p {
     font-size: 1.5rem;
