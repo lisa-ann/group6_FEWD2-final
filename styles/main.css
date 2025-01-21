@@ -359,6 +359,7 @@ main {
     text-align: center;
     margin:3rem 0;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
 }
 
 /* Mission Section */
@@ -458,6 +459,7 @@ main {
     text-align: left;
     padding-left: 2rem;
     color: black;
+    font-size: 1.5rem
     
 }
 /********MAGAZINE-PAGE*******************************************************************/
