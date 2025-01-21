@@ -3,18 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Tasty.co</title>
+    <title>Veggie Spaghetti Squash | Tasty.co</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="../.../styles/reset.css">
+    <link rel="stylesheet" href="../../styles/reset.css">
     <link rel="stylesheet" href="../../styles/main.css">
 </head>
-
 
 <body>
     <header>
@@ -25,7 +22,7 @@
                         <img src="../../images/logo.png" alt="Tasty.co Home">
                     </a>
                 </div>
-                
+                <!-- Inside the header, adjust the <nav> part -->
                 <input type="checkbox" id="showMenu" aria-label="Show menu" checked>
 
                 <ul class="menu" aria-label="Main Menu">
@@ -37,14 +34,13 @@
                         </ul>
                     </li>
                     <li><a href="../tips.html">TIPS &amp; TRICKS</a></li>
-                    <li><a href="../product.html">PRODUCTS</a></li>
+                    <li><a href="../products.html">PRODUCTS</a></li>
                     <li><a href="../about.html">OUR COMPANY</a></li>
-
-                    <li><a href="../contactUs.html">CONTACT US</a></li>
+                    <li><a href="../contact.html">CONTACT US</a></li>
                 </ul>
                 <div class="menu">
                     <button type="submit">Sign&nbsp;In</button>
-                    <a href="../cartCheckOut.html" aria-label="Go to Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="pages/cart.html" aria-label="Go to Cart"><i class="fa-solid fa-cart-shopping"></i></a>
                     <label for="showMenu" class="showMenu" aria-label="Toggle Menu">
                         <i class="fa-solid fa-bars"></i>
                     </label>
@@ -52,7 +48,7 @@
             </div>
         </nav>
     </header>
-    
+    <main>
         <!-- Search Bar Section -->
         <section class="search-bar">
             <button type="submit" aria-label="Search Button">
@@ -62,8 +58,6 @@
                 <input type="text" name="q" placeholder="Search Your Recipes" aria-label="Search input">
             </form>
         </section>
-        
-    <main>
     <!-- Hero Section -->
         <section class="hero">
             <picture class="heroImg">
@@ -135,16 +129,16 @@
             </section>
         </section>
 
-        <!-- ADVERTISEMENT SPACE -->
-        <section class="text-center" >
-            <h6>ADVERTISEMENT</h6>
-            <img src="../../images/targetAdWeb.jpg"  alt="Target Ads image" class="adSection">
-        </section>
+        <!-- Advertisement Section -->
+         <section class="text-center">
+             <h6>ADVERTISEMENT</h6>
+             <img src="../../images/ad.png" alt="Target Ads image">
+         </section>
      </main>
-     <footer>
-        <section>
+    <footer>
+        <section class="customer-service">
             <h6>Customer Service</h6>
-            <nav>
+            <nav class="footer-links">
                 <ul>
                     <li><a href="mailto:support@buzzfeed.com?subject=Tasty.co">Send feedback</a></li>
                     <li><a href="https://www.buzzfeed.com/about/privacy?country=en-us">Privacy Policy</a></li>
@@ -156,11 +150,13 @@
         </section>
         <section class="payment-method">
             <h6>Payment Methods</h6>
-            <img src="../../images/PayPal.png" alt="PayPal">
-            <img src="../../images/ApplePay.png" alt="Apple Pay">
-            <img src="../../images/GooglePay.png" alt="Google Pay">
-            <img src="../../images/Discover.png" alt="Discover">
-            <img src="../../images/Visa.png" alt="Visa">
+            <section class="payment-icons">
+                <img src="../../images/PayPal.png" alt="PayPal">
+                <img src="../../images/ApplePay.png" alt="Apple Pay">
+                <img src="../../images/GooglePay.png" alt="Google Pay">
+                <img src="../../images/Discover.png" alt="Discover">
+                <img src="../../images/Visa.png" alt="Visa">
+            </section>
         </section>
         <section class="footer-info">
             <h6>Follow Us</h6>
@@ -169,10 +165,13 @@
             <a href="https://www.instagram.com/buzzfeedtasty" title="Go to Tasty on Instagram" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.youtube.com/buzzfeedtasty" title="Go to Tasty on Youtube" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
         </section>
-        <section class="copyright">
-            <p>© Buzzfeed,Inc 2025</p>
+
+        <section class="end-logo">
+            <a href="index.html" aria-label="Go to Tasty.co Home">
+                <img src="../../images/logo.png" alt="Tasty.co Home">
+            </a>
+            <p>&copy; BuzzFeed, Inc 2025</p>
         </section>
     </footer>
-
 </body>
 </html>

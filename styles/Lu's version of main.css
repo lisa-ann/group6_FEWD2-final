@@ -69,13 +69,12 @@ header {
       top: 0;
     z-index: 5;
     text-align: center;
-    box-shadow: 2px gray;
 }
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 nav .logo{margin-left: 20px;}
@@ -103,6 +102,8 @@ nav .material-symbols-outlined{
 nav .material-symbols-outlined:hover {
     color: var(--highlight-color);
 }
+
+/* hamburger Menu*/
 .open-menu, .close-menu{
     position: absolute;
     color:aliceblue;
@@ -157,7 +158,6 @@ nav .material-symbols-outlined:hover {
     }
     .close-menu{
         position: sticky;
-        top:3;
     }
     #check:checked~ .menu{right: 0;}
     .menu a, a:visited {
@@ -170,37 +170,27 @@ nav .material-symbols-outlined:hover {
     }
 }
 
-/********not check yet******/
 
-/* Submenu */
-ul.menu {
-    position: relative;
-}
-nav ul.menu .subMenu {
-    left: 0;
+/* Submenu (still working on) */
+.subMenu{position:relative;}
+
+.subMenu:after{
+    content:"\25BC";
+    font-size: 1.5rem;
+    display: block;
     position: absolute;
+    top:38%;
+    right: 12%;
+}
+
+.subMenuDrop{
+    position:absolute;
     display: none;
 }
-nav ul.menu li:hover .subMenu {
-    display: block; /* Show submenu on hover */
+.subMenuDrop li{
+    border-bottom: 1px solid lightgray;
 }
-
-nav ul.menu .subMenu li {
-    background-color: var(--secondary-color);
-    color:  var(--light-color);
-    text-align: left;
-}
-nav ul.menu .subMenu li:hover {
-    border-radius: 0;
-    text-decoration: underline;
-}
-nav ul.menu .subMenu li:first-child {
-    border-radius: 0 5px 0 0 ;
-}
-nav ul.menu .subMenu li:last-child {
-    border-radius: 0 0 5px 5px;
-}
-
+.subMenu:hover > .subMenuDrop{display: block;}
 
 /*******************************************************
     4. MAIN BODY CONTENT
@@ -220,7 +210,7 @@ nav ul.menu .subMenu li:last-child {
     position: relative;
     border-radius: 10px;
     box-shadow: 2px 2px var(--dark-color);
-    width: 80%;
+    width: 100%;
     margin: 10px;
     border: none;
 }
@@ -257,7 +247,6 @@ nav ul.menu .subMenu li:last-child {
     color: var(--dark-color);
 }
 
-
    /**latest recipe**/
 .latest-recipes h2, .tips-tricks h2{
     border-bottom: solid 4px #fc8c00;
@@ -272,10 +261,9 @@ nav ul.menu .subMenu li:last-child {
     text-align: center;
 }
 .recipe-card img{
-    width: 250px;
-    height: 200px;
+    width: 200px;
+    height: 150px;
     border-radius: 5%;
-    shape-outside: border-box;
 }
 
  /**tips**/
@@ -286,16 +274,15 @@ nav ul.menu .subMenu li:last-child {
     padding: 20px;
 }
 .tip-card img{
-    width: 280px;
-    height: 280px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    shape-outside: circle(50%);
+
 }
 .tip-card article{
-    width: 400px;
-    padding: 20px;
+    width: 350px;
+    padding: 15px;
 }
-
 
  /**Products Section **/
 .products h2{border-bottom: solid 4px #65b504;}
@@ -320,13 +307,17 @@ nav ul.menu .subMenu li:last-child {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 20px;
+    padding: 5px;
 }
-.book-card img{
+.book-card img, .productImg img{
     width: 200px;
     height: 250px;
     border-radius: 5%;
-    shape-outside: border-box;
+}
+.cooker-card img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
 }
 
 .add-to-cart {
@@ -344,7 +335,14 @@ nav ul.menu .subMenu li:last-child {
     color: var(--dark-color);
 }
 
-/* Products page */
+/*recipe page (Lisa)*/
+   /** recipe page section 1...**/
+/* pumpkin soup recipe page (Lisa)*/
+
+/*tips page (KC)*/
+   /**tips page section 1...**/
+
+/* Products page (lu) */
    /**productPage hero**/
 .holiday-special{
     display: flex;
@@ -424,22 +422,22 @@ a:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap:10px;
+    gap:5px;
 }
 .product-grid h3{
     font-size:1.5rem;
     font-weight: bold;
 }
-.productImg{
-    width: 50%;
-    gap:20px;
+.productImg img{
+    width: 150px;
+    height: 200px;
+    border-radius: 5%;
 }
-
 .product-info{
     width: 80%;
 }
 .product-grid{
-    padding: 10px;
+    padding: 5px;
     border-bottom: solid .5px lightgray;
 }
 .price {
@@ -447,10 +445,18 @@ a:hover {
     float: right;
 }
 
+/*Our compny page (for Leyla)*/
+   /**our compy page section 1...**/
 
+/* journey page (Leyla)*/
+   /**journey section 1...**/
 
-/*contact us page*/
-.contactUSpage{margin: 30px;}
+/*signIn page (kc)*/
+
+/*contact us page (Lu)*/
+.contactUSpage{
+    max-width: 1200px;
+}
 .contactUSpage h2{
      font-family: "Caveat", serif;
     font-size: 4rem;
@@ -498,12 +504,12 @@ a:hover {
 }
 
 
-/*empty cart page*/
+/*empty cart page (lu)*/
 .empty-cart{
     text-align: center;
 }
 
-/*Ads*/
+/*Ads(lu)*/
 .ad{text-align: center;}
 .ad h2{
     font-size:1.5rem;
@@ -520,8 +526,8 @@ footer {
     color:  var(--light-color);
     padding: 2rem;
     text-align: center;
-   margin: 0 auto;
-    max-width: 1600px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 footer h2 {
     color: var(--light-color);
@@ -557,7 +563,7 @@ footer a:hover {
 .copyright {
     display: flex;
     justify-content: center;
-    align-items: center;ß
+    align-items: center;
 }
 .copyright p {
     font-size: 1.5rem;
@@ -570,8 +576,8 @@ footer a:hover {
  ******************************************************/
 
 @media screen and (min-width:768px){
-   header, .hero, main, footer>*{
-        max-width:1600px;
+   header, .hero, .holiday-special, main, footer>*{
+        max-width:1200px;
         margin: auto;
     }
     /*Nav large*/
@@ -593,6 +599,7 @@ footer a:hover {
     color: var(--highlight-color);
 }
     .material-symbols-outlined{margin-right: 30px;}
+    
     /**homepage hero large**/
   .hero{
     display: grid;
@@ -644,6 +651,7 @@ footer a:hover {
    }
     
     /**productPage hero large**/
+    
     .promo-content{flex-wrap:nowrap;}
     .holiday-special h1{font-size: 8rem;}
     .discount h2{font-size:8rem;}
@@ -674,11 +682,9 @@ footer a:hover {
        display: flex;
        justify-content: space-around;
        padding: 20px;
-       margin: 20px;
+       margin: auto;
     }
 
-    /*Ads large*/
-    
     /*footer large*/
     .footer-content{
       display: grid;

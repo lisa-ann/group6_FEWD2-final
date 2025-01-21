@@ -1,128 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CheckOut Tasty.co</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" type="text/css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/main.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tasty.co - cart check out</title>
+ 
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" type="text/css">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         
+        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+        <link href="../css/reset.css" rel="stylesheet" type="text/css">
+        <link href="../css/main.css" rel="stylesheet" type="text/css">
 </head>
-
     
  <body>
-        <header>
-        <nav>
-            <div class="header">
-                <div class="logo">
-                    <a href="../index.html" aria-label="Go to Tasty.co Home">
-                        <img src="../images/logo.png" alt="Tasty.co Home">
-                    </a>
-                </div>
-                
-                <input type="checkbox" id="showMenu" aria-label="Show menu" checked>
-
-                <ul class="menu" aria-label="Main Menu">
-                    <li><a href="recipes.html">RECIPES <i class="fa-solid fa-caret-down"></i></a>                        
-                        <ul class="subMenu" aria-label="Submenu">
-                            <li><a href="recipes/pumpkin-soup.html">Pumpkin Soup</a>
-                            <li><a href="recipes/rainbow-salad.html">Rainbow Salad</a>
-                            <li><a href="recipes/veggie-spaghetti.html">Veggie Spaghetti</a>
-                        </ul>
-                    </li>
-                    <li><a href="tips.html">TIPS &amp; TRICKS</a></li>
-                    <li><a href="product.html">PRODUCTS</a></li>
-                    <li><a href="about.html">OUR COMPANY</a></li>
-
-                    <li><a href="contactUs.html">CONTACT US</a></li>
-                </ul>
-                <div class="menu">
-                    <button type="submit">Sign&nbsp;In</button>
-                    <a href="cartCheckOut.html" aria-label="Go to Cart"><i class="fa-solid fa-cart-shopping"></i></a>
-                    <label for="showMenu" class="showMenu" aria-label="Toggle Menu">
-                        <i class="fa-solid fa-bars"></i>
-                    </label>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Search Bar Section -->
-    <section class="search-bar">
-       <button type="submit" aria-label="Search Button">
-                <i class="fa-solid fa-search"></i>
-            </button>
-        <form action="/search" method="GET" aria-label="Search Recipes">
-            <input type="text" name="q" placeholder="Search Your Recipes" aria-label="Search input" />
+         <!-- Navigation -->
+         <header>
+           <nav>
+            <figure class="logo">
+                <a href="../index.html"><img src="../images/logo.png" alt="Tasty Logo"></a>
+            </figure>
             
-        </form>
-    </section>
+            <ul>
+                <input type="checkbox" id="check">
+                <label for="check" class="open-menu"><span class="material-symbols-outlined">menu</span></label>
+                <span class="menu">
+                 <label for="check" class="close-menu"><span class="material-symbols-outlined">menu_open</span></label>
+                 <section  class="nav-menu">
+                  <li><a href="recipes.html">RECIPES</a></li>
+                  <li><a href="tips.html">TIPS &amp; TRICKS</a></li>
+                  <li><a href="product.html">PRODUCTS</a></li>
+                  <li><a href="journey.html">OUR COMPANY</a></li>
+                  <li><a href="contactUs.html">CONTACT US</a></li>
+                </section>
+                </span>
+            </ul>
+            
+            <a href="contactUs.html"><button class="sign-in">SIGN IN</button></a>
+            
+            <a href="cartCheckOut.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+          </nav>
+             
+          <section class="searchBar">
+              <p><span class="material-symbols-outlined">search</span>    <input type="search" placeholder="Search Your Recipes"></p>
+          </section>
+    </header>
    
-    <!-- Empty Cart Section -->
-    <main class="empty-cart-container">
+    
+    <main>
+       <!-- Empty Cart Section -->
         <section class="empty-cart">
             <img src="../images/emptyCartbag.png" alt="Empty Shopping Bag" class="empty-cart-image">
             <h1>Your Cart is empty.</h1>
             <a href="product.html" class="back-to-shopping">Back to shopping</a>
         </section>
-    </main>
 
     <!-- Products Section -->
     <section class="products">
-        <section class="cookbooks">
-            <h2>Cookbooks</h2>      
-                <section class="product-cards">
-                    <article class="product-card">
-                        <img src="../images/book1.png" alt="Tasty Ultimate Cookbook">
-                        <button class="add-to-cart">Add to Cart</button>
-                    </article>
-                    <article class="product-card">
-                        <img src="../images/book2.png" alt="Tasty Cookbook">
-                        <button class="add-to-cart">Add to Cart</button>
-                    </article>
-                    <article class="product-card">
-                        <img src="../images/book3.png" alt="Tasty Pride Cookbook">
-                        <button class="add-to-cart">Add to Cart</button>
-                    </article>
-                </section>
-            </section>
-
-        <section class="cookware">
-            <h2>Cookware</h2>
-            <section class="product-carousel">    
-                <section class="product-cards">
-                    <article class="product-card">
-                        <img src="../images/cooker1.png" alt="Cookware Set 1">
-                        <button class="add-to-cart">Add to Cart</button>
-                    </article>
-                    <article class="product-card">
-                        <img src="../images/cooker2.png" alt="Cookware Set 2">
-                        <button class="add-to-cart">Add to Cart</button>
-                    </article>
-                </section>
+        <h2>Our Products</h2>
+        <section class="products-carousel">
+               <!-- Cookbook products... -->
+             <section class="book-carousel">
+                  <article class="shopTitle">
+                      <h3>Cookbooks</h3>
+                      <a href="product.html" class="shop-all">Shop All</a>
+                   </article>
+           
+                  <article class="books">
+                       <figure class="book-card">
+                         <img src="../images/book1.png" alt="Book Cover 1">
+                         <button class="add-to-cart">Add to Cart</button>
+                       </figure>
+            
+                       <figure class="book-card">
+                         <img src="../images/book2.png" alt="Book Cover 2">
+                         <button class="add-to-cart">Add to Cart</button>
+                       </figure>
+            
+                       <figure class="book-card">
+                         <img src="../images/book3.png" alt="Book Cover 3">
+                         <button class="add-to-cart">Add to Cart</button>
+                       </figure>
+                   </article>
+             </section>
+                 
+               <!-- Cookware products... -->     
+             <section class="ware-carousel">
+                  <article class="shopTitle">
+                     <h3>Cookware</h3>
+                     <a href="product.html" class="shop-all">Shop All</a>
+                   </article>
+          
+                  <article class="ware">
+                       <figure class="cooker-card">
+                           <img src="../images/cooker1.png" alt="Cookware 1">
+                           <button class="add-to-cart">Add to Cart</button>
+                       </figure>
+            
+                       <figure class="cooker-card">
+                         <img src="../images/cooker2.png" alt="Cookware 2">
+                         <button class="add-to-cart">Add to Cart</button>
+                       </figure>
+                   </article>
             </section>
         </section>
     </section>
 
-    <!-- ADVERTISEMENT SPACE -->
-        <section class="text-center" >
-            <h6>ADVERTISEMENT</h6>
-            <img src="../images/targetAdWeb.jpg"  alt="Target Ads image" class="adSection">
-        </section>
+   <!-- Advertisement Section -->
+     <section class="ad">
+         <h2>ADVERTISEMENT</h2>
+         <picture class="adImg">
+         <!-- Mobile Image-->
+          <source media="(max-width: 768px)" srcset="../images/adSmall.png">
+          <!-- desktop Image-->
+          <source media="(min-width: 769px)" srcset="../images/ad.png">
+          <img src="../images/ad.png" alt="Target Ads image">
+         </picture>    
+     </section>
+ </main>
 
     <!-- Footer -->
-    <footer>
-        <section>
-            <h6>Customer Service</h6>
-            <nav>
+ <footer>
+     <section class="footer-content">
+        <section class="customer-service">
+            <nav class="footer-links">
                 <ul>
-                    <li><a href="mailto:support@buzzfeed.com?subject=Tasty.co">Send feedback</a></li>
+                    <li><a href="pages/contactUs.html">Send Feedback</a></li>
                     <li><a href="https://www.buzzfeed.com/about/privacy?country=en-us">Privacy Policy</a></li>
                     <li><a href="https://www.buzzfeed.com/about/useragreement?country=en-us">User Agreement</a></li>
                     <li><a href="https://tasty.co/tastyvalues">Our Tasty Values</a></li>
@@ -131,24 +137,38 @@
             </nav>
         </section>
         <section class="payment-method">
-            <h6>Payment Methods</h6>
-            <img src="../images/PayPal.png" alt="PayPal">
-            <img src="../images/ApplePay.png" alt="Apple Pay">
-            <img src="../images/GooglePay.png" alt="Google Pay">
-            <img src="../images/Discover.png" alt="Discover">
-            <img src="../images/Visa.png" alt="Visa">
+            <h2>Payment Method</h2>
+            <section class="payment-icons">
+                <img src="../images/PayPal.png" alt="PayPal">
+                <img src="../images/ApplePay.png" alt="Apple Pay">
+                <img src="../images/GooglePay.png" alt="Google Pay">
+                <img src="../images/Discover.png" alt="Discover">
+                <img src="../images/Visa.png" alt="Visa">
+            </section>
         </section>
-        <section class="footer-info">
-            <h6>Follow Us</h6>
-            <a href="https://www.facebook.com/buzzfeedtasty/" title="Go to Tasty on Facebook" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com/tasty" title="Go to Tasty on X" target="_blank" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://www.instagram.com/buzzfeedtasty" title="Go to Tasty on Instagram" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/buzzfeedtasty" title="Go to Tasty on Youtube" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+
+        <section class="payment-method">
+            <h2>Payment Method</h2>
+            <section class="payment-icons">
+                <img src="../images/PayPal.png" alt="PayPal">
+                <img src="../images/ApplePay.png" alt="Apple Pay">
+                <img src="../images/GooglePay.png" alt="Google Pay">
+                <img src="../images/Discover.png" alt="Discover">
+                <img src="../images/Visa.png" alt="Visa">
+            </section>
         </section>
+
+        <section class="social-media">
+            <h2>Follow Us</h2>
+   
+        </section>
+     
         <section class="copyright">
-            <p>© Buzzfeed,Inc 2025</p>
-        </section>
-    </footer>
+               <a href="index.html"><img src="../images/logo.png" alt="Tasty Logo"></a>
+                <p>&copy; Buzzfeed,Inc 2025</p>
+        </section>     
+    </section>
+   </footer>
 
 </body>
 </html>

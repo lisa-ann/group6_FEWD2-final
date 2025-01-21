@@ -272,6 +272,7 @@ nav .material-symbols-outlined:hover {
     justify-content: space-around;
     align-items: center;
     padding: 20px;
+    margin-top: 0;
 }
 .tip-card img{
     width: 200px;
@@ -295,13 +296,14 @@ nav .material-symbols-outlined:hover {
     flex-wrap: wrap;
     border-bottom:  solid .5px lightgray;
 }
-.book-carousel, .ware-carousel{
+.book-carousel, .ware-carousel, .text-center {
     text-align: center;
 }
 .shopTitle {
     align-items: center;
     justify-content: space-evenly;
 }
+
 .shopTitle h3{font-weight: 700;}
 .book-card, .cooker-card{
     display: flex;
@@ -349,6 +351,26 @@ nav .material-symbols-outlined:hover {
     flex-direction: column;
     background-color: var(--secondary-color);
 }
+
+/* Hero Section */
+main section.hero {
+    background-color: var(--highlight-color);
+    margin-top: 0;
+}
+.hero img {
+    border-radius: 10px;
+    height: auto;
+    box-shadow: 2px 2px 2px var(--dark-color);
+    width: 100%;
+}
+
+/* Latest Recipes Section */
+
+.recipe-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+}
 .holiday-special h1{
     font-family: "Caveat", serif;
     font-size: 6rem;
@@ -378,6 +400,23 @@ nav .material-symbols-outlined:hover {
     font-weight: 600;
     color:var(--light-color);
     text-align: center;
+    gap: 20px;
+    overflow-x: auto;
+}
+
+.tip-card {
+    width: 300px;
+    text-align: center;
+}
+
+.tip-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.tip-card h3 {
+    font-size: 1.8rem;
 }
 .discount a{align-self: flex-end;}
 .discount a, .signup-form a{
@@ -417,6 +456,29 @@ a:hover {
 .product-categories{
     margin: 10px;
     gap:10px;
+}
+/* Products Section */
+
+.book-card img, .cooker-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/*******************************************************
+    about-us page
+ ******************************************************/
+
+.header-mission h1 {
+    margin: 0;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: sans-serif;
+    background-color:var(--highlight-color);
+    padding: 1rem;
+    text-align: center;
+    margin:3rem 0;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 .product-grid, .form-row{
     display: flex;
@@ -479,6 +541,7 @@ a:hover {
     border-bottom: dashed .8px gray;
     margin-bottom: 30px;
 }
+
 .radio-group, .checkbox-group{
     display: flex;
     justify-content: space-evenly;
@@ -489,6 +552,21 @@ a:hover {
 .radio-group label, .checkbox-group label{padding: 20px;}
 .signin-form p{
     color: gray;
+}
+/********MAGAZINE-PAGE*******************************************************************/
+
+
+.magazine{
+    padding:2rem 4rem;
+    font-size: 1.8rem;
+
+}
+
+
+
+.magazine ul{
+    list-style-type: circle;
+    margin-left: 3rem;
     font-size: 1.5rem;
     text-align: center;
 }
@@ -571,6 +649,7 @@ footer a:hover {
     align-self: center;
 }
 
+
 /*******************************************************
     7.Responsive design
  ******************************************************/
@@ -598,6 +677,7 @@ footer a:hover {
    .nav-menu a:hover {
     color: var(--highlight-color);
 }
+
     .material-symbols-outlined{margin-right: 30px;}
     
     /**homepage hero large**/
@@ -628,6 +708,24 @@ footer a:hover {
   margin-left: 300px;
   }
   .HomeSignup-form {
+  }
+
+/*******************************************************
+    8. MEDIA QUERIES
+ ******************************************************/
+
+@media screen and (min-width: 768px) {
+    .menu {
+        justify-content: flex-start;  /* Align menu items side by side */
+        padding-right: 1rem;
+        position: static;
+        
+    }
+
+    nav ul.menu li{
+        gap:5rem;
+    }
+    nav input[type=checkbox]:checked ~ ul.menu {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -667,6 +765,7 @@ footer a:hover {
         width: 800px;
         border-bottom:none;
     }
+
     .product-info{
         width: 60%;
         padding: 20px;
@@ -676,6 +775,14 @@ footer a:hover {
     margin: 10px;
 }
     .category-cookbooks, .category-cookware{border-bottom: solid .5px lightgray;}
+
+
+    div .menu i.fa-cart-shopping{ font-size: 2.5rem}
+
+/***********ABOUT-US*******************************************************/
+p{font-size: 2rem;}
+
+
     
     /**contact us page large**/
     .contactUSpage{
@@ -700,6 +807,7 @@ footer a:hover {
         grid-row: 1/2;
         flex-wrap: nowrap;
     }
+
     .social-media{
     grid-column: 2/3;
     grid-row: 2/3;
