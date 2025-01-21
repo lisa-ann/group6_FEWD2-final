@@ -197,7 +197,6 @@ nav ul.menu .subMenu li:last-child {
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     margin-top: 0;
-    margin-bottom: 30px;
 }
 
 .search-bar input[type=text] {
@@ -228,9 +227,6 @@ main section {
     padding: 2rem;
 }
 
-h2 {
-    text-align: center;
-}
 .text-center {
     text-align: center;
 }
@@ -243,52 +239,20 @@ h2 {
 main section.hero {
     background-color: var(--highlight-color);
     margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
 }
-
-main {
-    max-width: 80%;
-    margin: auto;
-} 
-.hero {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: auto;
-}
-
 .hero img {
-    border-radius: 8px;
-    /* box-shadow: 2px 2px 2px 2px var(--dark-color); */
-    max-width: 70%;
+    border-radius: 10px;
     height: auto;
+    box-shadow: 2px 2px 2px var(--dark-color);
+    width: 100%;
 }
-
 
 /* Latest Recipes Section */
 
 .recipe-carousel {
-    display: grid;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.recipe-carousel img { 
-    padding-bottom: 0;
-}
-
-.recipe-carousel h3 { 
-    padding-top: 0;
-    margin-top: 0; 
-    margin-bottom: 3rem;
-}
-
-.recipe-card {
     display: flex;
-    flex-direction: column;
+    gap: 20px;
+    overflow-x: auto;
 }
 
 .recipe-card img {
@@ -300,13 +264,12 @@ main {
 /* Tips & Tricks Section */
 .tips-carousel {
     display: flex;
-    flex-direction: column;
     gap: 20px;
     overflow-x: auto;
 }
 
 .tip-card {
-    width: 200px;
+    width: 300px;
     text-align: center;
 }
 
@@ -318,7 +281,6 @@ main {
 
 .tip-card h3 {
     font-size: 1.8rem;
-    text-align: center;
 }
 
 .tip-card p {
@@ -328,22 +290,11 @@ main {
 
 /* Products Section */
 
-
-.cookbooks, .cookware {
-    width: 200px;
-    text-align: center;
-    margin: auto;
-}
-
-.cookbooks img, .cookware img {
-    width: 70%;
+.book-card img, .cooker-card img {
+    width: 100%;
     height: auto;
-    margin: auto;
     border-radius: 8px;
-    grid-column: 1/-1;
 }
-
-
 /*******************************************************
     about-us page
  ******************************************************/
@@ -466,7 +417,10 @@ main {
 .magazine{
     padding:2rem 4rem;
     font-size: 1.8rem;
+
 }
+
+
 
 .magazine ul{
     list-style-type: circle;
@@ -531,20 +485,6 @@ footer i a:hover {
     margin: 0;
 }
 
-.payment-method {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /*change for media query*/
-}
-
-.payment-method img, .fa-brands  {
-    min-width: 30px;
-    max-width: 40px;
-    margin: auto;
-}
-
-
 /*******************************************************
     7. FORMS
  ******************************************************/
@@ -598,7 +538,7 @@ legend {
     }
 
     nav ul.menu li{
-        gap: 5rem;
+        gap:5rem;
     }
     nav input[type=checkbox]:checked ~ ul.menu {
     display: flex;
@@ -637,19 +577,9 @@ legend {
     }
 
     div .menu i.fa-cart-shopping{ font-size: 2.5rem}
-    
-    footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-    }
-    
-    .footer-info, .copyright {
-        grid-column: 1/-1;
-    }
-}
+
 /***********ABOUT-US*******************************************************/
-p {font-size: 2rem;}
+p{font-size: 2rem;}
 
     
 .journey {
@@ -714,58 +644,30 @@ p {font-size: 2rem;}
     }
 }
 
-/************TIPS and TRICKS******************************************************/
-/* tips and tricks page css */
-
-#tipsTricks {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 600px;
-    min-width: 300px;
-    margin: auto;
-    
-}
-
-#tipsTricks h3 {
-    color: black;
-    font: 2rem "Assistant", sans-serif;
-}
-#signupTips {
-    color: black;
-}
-
-.signup-form, .signup-news {
-    color: black;
-    background-color: rgba(255,216,76,.25);
-    width: 100%;
-    padding: 20px;
-}
-
-.tipsAuthor, .tipsReader {
-    color: black;
-    background-color: rgba(252,140,0,.25);
-    width: 100%;
-    max-width: 600px;
-    min-width: 200px;
-    /*align-content: center;*/
-    display: flex;
-    flex-direction: column;
-    /*align-items: center;*/
-    padding: 10px;
-}
-
-.tipsAuthor img, .tipsReader img {
-    border-radius: 8px;
-    max-width: 200px;
-    margin: auto;
-}
 
 
-/************ADVERTISEMENT******************************************************/
-/* advertisement section css */
 
-.adSection {
-    width: 100%;
-    margin: auto;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
