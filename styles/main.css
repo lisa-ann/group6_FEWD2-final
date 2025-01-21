@@ -380,14 +380,16 @@ main {
 }
 
 /* Journey Section */
-
+.journey {
+    display: block;
+}
 .journey h2 {
     color: black;
     margin: 2rem 0;
     font-family: sans-serif;
     font-weight: 600;
     margin-top: 3rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #333;
     text-align: center; 
 }
@@ -399,7 +401,7 @@ main {
 }
 
 .journey li a{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: black;
     margin-left: 2rem;
 }
@@ -545,6 +547,15 @@ footer i a:hover {
     max-width: 40px;
     margin: auto;
 }
+.copyright{display: flex;
+    
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+justify-content: center;}
+.copyright img{ width: 10rem;;
+height: auto;}
+.copyright p{
+    margin-top: 2.5rem;
+}
 
 
 /*******************************************************
@@ -646,14 +657,37 @@ legend {
         grid-template-rows: auto;
     }
     
-    .footer-info, .copyright {
+    .copyright {
         grid-column: 1/-1;
     }
-}
+    .payment-method{display: block;}
+    .payment-method h6{padding-bottom: 4rem;
+    font-size: 2rem;}
+    .footer-info{
+        grid-column: -2/-1;
+        
+    }
+    .footer-info h6{padding-bottom:  2rem;
+    font-size: 2rem;}
+    section h6{font-size: 2rem;}
+   
 /***********ABOUT-US*******************************************************/
 p {font-size: 2rem;}
 
     
+
+.team{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+/************OUR-JOURNEY*************************************************************/
+    .magazine{
+        font-size: 3rem;
+    }
+    .magazine ul{
+        font-size: 2rem;
+    }
 .journey {
     text-align: center;
 }
@@ -702,19 +736,7 @@ p {font-size: 2rem;}
     margin: 0;
 }
 
-.team{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-/************OUR-JOURNEY*************************************************************/
-    .magazine{
-        font-size: 3rem;
-    }
-    .magazine ul{
-        font-size: 2rem;
-    }
-}
+
 
 /************TIPS and TRICKS******************************************************/
 /* tips and tricks page css */
