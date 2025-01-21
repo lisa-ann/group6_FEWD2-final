@@ -102,6 +102,8 @@ nav .material-symbols-outlined{
 nav .material-symbols-outlined:hover {
     color: var(--highlight-color);
 }
+
+/* hamburger Menu*/
 .open-menu, .close-menu{
     position: absolute;
     color:aliceblue;
@@ -168,37 +170,27 @@ nav .material-symbols-outlined:hover {
     }
 }
 
-/********not check yet******/
 
-/* Submenu */
-ul.menu {
-    position: relative;
-}
-nav ul.menu .subMenu {
-    left: 0;
+/* Submenu (still working on) */
+.subMenu{position:relative;}
+
+.subMenu:after{
+    content:"\25BC";
+    font-size: 1.5rem;
+    display: block;
     position: absolute;
+    top:38%;
+    right: 12%;
+}
+
+.subMenuDrop{
+    position:absolute;
     display: none;
 }
-nav ul.menu li:hover .subMenu {
-    display: block; /* Show submenu on hover */
+.subMenuDrop li{
+    border-bottom: 1px solid lightgray;
 }
-
-nav ul.menu .subMenu li {
-    background-color: var(--secondary-color);
-    color:  var(--light-color);
-    text-align: left;
-}
-nav ul.menu .subMenu li:hover {
-    border-radius: 0;
-    text-decoration: underline;
-}
-nav ul.menu .subMenu li:first-child {
-    border-radius: 0 5px 0 0 ;
-}
-nav ul.menu .subMenu li:last-child {
-    border-radius: 0 0 5px 5px;
-}
-
+.subMenu:hover > .subMenuDrop{display: block;}
 
 /*******************************************************
     4. MAIN BODY CONTENT
@@ -218,7 +210,7 @@ nav ul.menu .subMenu li:last-child {
     position: relative;
     border-radius: 10px;
     box-shadow: 2px 2px var(--dark-color);
-    width: 80%;
+    width: 100%;
     margin: 10px;
     border: none;
 }
@@ -254,7 +246,6 @@ nav ul.menu .subMenu li:last-child {
     background-color: var(--secondary-color);
     color: var(--dark-color);
 }
-
 
    /**latest recipe**/
 .latest-recipes h2, .tips-tricks h2{
@@ -292,7 +283,6 @@ nav ul.menu .subMenu li:last-child {
     width: 350px;
     padding: 15px;
 }
-
 
  /**Products Section **/
 .products h2{border-bottom: solid 4px #65b504;}
@@ -345,7 +335,14 @@ nav ul.menu .subMenu li:last-child {
     color: var(--dark-color);
 }
 
-/* Products page */
+/*recipe page (Lisa)*/
+   /** recipe page section 1...**/
+/* pumpkin soup recipe page (Lisa)*/
+
+/*tips page (KC)*/
+   /**tips page section 1...**/
+
+/* Products page (lu) */
    /**productPage hero**/
 .holiday-special{
     display: flex;
@@ -448,9 +445,15 @@ a:hover {
     float: right;
 }
 
+/*Our compny page (for Leyla)*/
+   /**our compy page section 1...**/
 
+/* journey page (Leyla)*/
+   /**journey section 1...**/
 
-/*contact us page*/
+/*signIn page (kc)*/
+
+/*contact us page (Lu)*/
 .contactUSpage{
     max-width: 1200px;
 }
@@ -501,12 +504,12 @@ a:hover {
 }
 
 
-/*empty cart page*/
+/*empty cart page (lu)*/
 .empty-cart{
     text-align: center;
 }
 
-/*Ads*/
+/*Ads(lu)*/
 .ad{text-align: center;}
 .ad h2{
     font-size:1.5rem;
