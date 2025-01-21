@@ -18,7 +18,6 @@ html {
     font-size: 10px;
 }
 body {
-    color: var(--dark-color);
     font-family: "Assistant", sans-serif;
     font-size: 1.5rem;
     line-height: 1.5;
@@ -27,9 +26,9 @@ html, body {
     height: 100%;
     width: 100%;
 }
-h1, h2 {
-    font-family: "Caveat", serif;
-}
+
+main{margin: 0 10px;}
+
 h1 {
     color:  var(--light-color);
     text-shadow: 2px 2px 2px var(--dark-color);
@@ -41,25 +40,21 @@ h2 {
 h3 {
     font-size: 1.8rem;
 }
-h2, h3, h4 {
-    color: var(--primary-color);
-    margin-top: 1.3rem;
-}
-h6 {
-    font-weight: bold;
-}
-h6, p {
+
+p {
     margin-top: 1rem;
 }
+
+img {
+    height: auto;
+}
+
 a, a:visited {
     color: var(--secondary-color);
 }
 a:hover {
     color: var(--primary-color);
     text-decoration: underline;
-}
-img {
-    height: auto;
 }
 ol li {
     list-style: decimal;
@@ -70,169 +65,291 @@ ol li {
  ******************************************************/
 header {
     background-color: var(--primary-color);
-    padding: 1rem;
+    position: sticky;
+      top: 0;
+    z-index: 5;
     text-align: center;
 }
-
-.header {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.header button{
-    display: none;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.menu a, .menu label {
-    text-decoration: none;
-    font-size: 3rem;
-}
-
-.menu li a{
-    font-size: 1.5rem;
-    margin:0;
-    font-weight: bold
-}
-
-header img {
-    width: 150px;
-}
-
-nav a, nav a:visited, label i {
-    color:  var(--light-color);
-    text-decoration: none;
-}
-
-nav a:hover, footer a:hover, label i:hover {
-    color: var(--highlight-color);
-    text-decoration: none;
-}
-
-nav a {
-    display: block;
-}
-
-nav ul li {
-    padding: 0.5rem;
-}
-
-nav ul.menu {
-    display: none;
-}
-
-nav input[type=checkbox]:checked ~ ul.menu {
-    display: block;
-  
-}
-
-nav input[type=checkbox] {
-    display: none;
-}
-
-.showMenu {
+nav .logo{margin-left: 20px;}
+.sign-in {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    font-size: 2rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
     cursor: pointer;
-    display: block;
-    padding: .3em;
-    background-color: var(--primary-color);
-    color:  var(--light-color);
+    transition: background-color 0.3s;
 }
 
-nav ul.menu li {
-    background-color: var(--primary-color);
-    text-align: center;
+.sign-in:hover {
+    background-color: var(--highlight-color);
+    color: var(--dark-color);
 }
 
-nav ul.menu li a {
-    color:  var(--light-color);
-    display: block;
-    padding: 1rem;
+nav .material-symbols-outlined{
+    color: var(--light-color);
+    margin-left: 5px;
+    margin-top:3px;
+}
+nav .material-symbols-outlined:hover {
+    color: var(--highlight-color);
 }
 
-nav ul.menu li:hover {
-    background-color: var(--secondary-color);
-    border-radius: 5px;
-}
-
-nav input[type=checkbox] {
-    display: none; /* Hide the checkbox */
-}
-
-/* Submenu */
-ul.menu {
-    position: relative;
-}
-nav ul.menu .subMenu {
-    left: 0;
+/* hamburger Menu*/
+.open-menu, .close-menu{
     position: absolute;
+    color:aliceblue;
+    cursor: pointer;
+    font-size: 1.5rem;
     display: none;
 }
-nav ul.menu li:hover .subMenu {
-    display: block; /* Show submenu on hover */
+.open-menu{
+    top: 50%;
+    right:20px;
+    transform: translateY(-50%);
 }
-
-nav ul.menu .subMenu li {
-    background-color: var(--secondary-color);
-    color:  var(--light-color);
+.close-menu{
+    top: 20px;
+    right: 20px;
+}
+#check{display: none;}
+.searchBar{
+    background-color: var(--light-color);
     text-align: left;
+    width: auto;
+    height: 35px;
+    border-bottom: solid 1px gray;
 }
-nav ul.menu .subMenu li:hover {
-    border-radius: 0;
-    text-decoration: underline;
+.searchBar input {
+    font-size: 1.5rem;
+    width:60%;
+    border:none;
+    margin-left: 10px;
+    
 }
-nav ul.menu .subMenu li:first-child {
-    border-radius: 0 5px 0 0 ;
-}
-nav ul.menu .subMenu li:last-child {
-    border-radius: 0 0 5px 5px;
+@media screen and (max-width:768px){
+    .menu{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--primary-color);
+    transition: all 0.2s ease-in-out;
+    }
+    ul {order: 1;}
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu, .close-menu{display: block;}
+    .open-menu{padding: 10px;
+    margin-top: -20px;
+    }
+    .close-menu{
+        position: sticky;
+    }
+    #check:checked~ .menu{right: 0;}
+    .menu a, a:visited {
+        color: var(--light-color);
+        text-decoration: none;
+    }
+    .menu a:hover {
+         color: var(--highlight-color);
+         text-decoration: none;
+    }
 }
 
-/* Search bar */
-.search-bar {
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
-    display: flex;
-    margin-top: 0;
+
+/* Submenu (still working on) */
+.subMenu{position:relative;}
+
+.subMenu:after{
+    content:"\25BC";
+    font-size: 1.5rem;
+    display: block;
+    position: absolute;
+    top:38%;
+    right: 12%;
 }
 
-.search-bar input[type=text] {
-    border: 2px solid  var(--light-color);
-    font-size: 2rem;
-    margin: 0;
-    width: 100%;
+.subMenuDrop{
+    position:absolute;
+    display: none;
 }
-.search-bar input[type=text]:hover {
-    border: 2px solid var(--dark-color);
-    border-radius: 3px;
+.subMenuDrop li{
+    border-bottom: 1px solid lightgray;
 }
-
-.search-bar button {
-    background-color:   var(--light-color);
-    color:  var(--dark-color);
-    font-size: 2rem;
-    margin: 0;
-    padding: 0 1rem;
-}
+.subMenu:hover > .subMenuDrop{display: block;}
 
 /*******************************************************
     4. MAIN BODY CONTENT
  ******************************************************/
 
-main section {
-    margin-top: 3rem;
-    padding: 2rem;
+/*homepage*/
+  /**hero**/
+.hero{
+    background-color: var(--highlight-color);
+    width: 100%;
+    padding: 20px;
 }
-
-.text-center {
+.heroImg, .heroText, .HomeSignup-form{
     text-align: center;
 }
+.hero img {
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 2px 2px var(--dark-color);
+    width: 100%;
+    margin: 10px;
+    border: none;
+}
+.heroText h2{
+    font-family: "Assistant", sans-serif;
+    font-size: 3rem;
+}
+.heroTitle {
+  font-family: "Caveat", serif;
+  font-size: 8rem;
+  margin-bottom: 1rem;
+}
+.HomeSignup-form{padding: 30px;}
+.HomeSignup-form p, .signBox{margin-bottom: 8px;}
+.HomeSignup-form input {
+  padding: 0.75rem;
+  width: 250px;
+  border: none;
+  border-radius: 4px;
+  margin-right: auto;
+}
+.create-account-btn, .signin-button, .submit-button{
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.hero .create-account-btn:hover, .signin-button:hover, .submit-button:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
 
-.text-bold {
-    font-weight: bold;
+   /**latest recipe**/
+.latest-recipes h2, .tips-tricks h2{
+    border-bottom: solid 4px #fc8c00;
+}
+.recipe-carousel{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+}
+.recipe-card{
+    padding: 20px;
+    text-align: center;
+}
+.recipe-card img{
+    width: 200px;
+    height: 150px;
+    border-radius: 5%;
+}
+
+ /**tips**/
+ .tip-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 0;
+}
+.tip-card img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+}
+.tip-card article{
+    width: 350px;
+    padding: 15px;
+}
+
+ /**Products Section **/
+.products h2{border-bottom: solid 4px #65b504;}
+.shopTitle, .books, .ware{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.books{
+    flex-wrap: wrap;
+    border-bottom:  solid .5px lightgray;
+}
+.book-carousel, .ware-carousel, .text-center {
+    text-align: center;
+}
+.shopTitle {
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.shopTitle h3{font-weight: 700;}
+.book-card, .cooker-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5px;
+}
+.book-card img, .productImg img{
+    width: 200px;
+    height: 250px;
+    border-radius: 5%;
+}
+.cooker-card img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+}
+
+.add-to-cart {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px;
+}
+.add-to-cart:hover {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+}
+
+/*recipe page (Lisa)*/
+   /** recipe page section 1...**/
+/* pumpkin soup recipe page (Lisa)*/
+
+/*tips page (KC)*/
+   /**tips page section 1...**/
+
+/* Products page (lu) */
+   /**productPage hero**/
+.holiday-special{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
 }
 
 /* Hero Section */
@@ -254,16 +371,35 @@ main section.hero {
     gap: 20px;
     overflow-x: auto;
 }
-
-.recipe-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+.holiday-special h1{
+    font-family: "Caveat", serif;
+    font-size: 6rem;
+    color: #eb4034;
+    text-align: center;
 }
-
-/* Tips & Tricks Section */
-.tips-carousel {
+.promo-content{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap:wrap;
+    margin: 20px;
+}
+.discount{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.discount h2{
+    font-size:6rem;
+    font-weight: 800;
+    color:var(--primary-color);
+    text-align: center;
+}
+.discount h3{
+    font-size:4rem;
+    font-weight: 600;
+    color:var(--light-color);
+    text-align: center;
     gap: 20px;
     overflow-x: auto;
 }
@@ -282,12 +418,45 @@ main section.hero {
 .tip-card h3 {
     font-size: 1.8rem;
 }
-
-.tip-card p {
-    font-size: 1.4rem;
-    margin-top: 1rem;
+.discount a{align-self: flex-end;}
+.discount a, .signup-form a{
+    color:#ffd84c;
+}
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.signup-form{
+     display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.signup-form p, .signBox{margin-bottom: 20px;}
+.signup-form input {
+  padding: 0.75rem;
+  width: 250px;
+  border: none;
+  border-radius: 4px;
+  margin-right: auto;
 }
 
+.create-account-btn{
+    width: 200px;
+    align-self: center;
+    margin-top: 20px;
+}
+.create-account-btn:hover {
+    background-color: #ffd84c;
+    color: var(--dark-color);
+}
+
+   /** product section**/
+.products { border-bottom:solid 4px #ffd84c; }
+   /**product categories**/
+.product-categories{
+    margin: 10px;
+    gap:10px;
+}
 /* Products Section */
 
 .book-card img, .cooker-card img {
@@ -311,105 +480,78 @@ main section.hero {
     margin:3rem 0;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
-
-/* Mission Section */
-.mission {
-    background-image: url('../images/about-us-images/header-background.jpg'); /* Replace with your background image */
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: black;
-}
-
-.mission-content p {
-    background-color: rgba(242, 240, 240, 0.8);
-    padding: 3rem;
-    display: inline-block;
-    margin-top:0;
-   
-}
-
-/* Journey Section */
-
-.journey h2 {
-    color: black;
-    margin: 2rem 0;
-    font-family: sans-serif;
-    font-weight: 600;
-    margin-top: 3rem;
-    font-size: 1.5rem;
-    color: #333;
-    text-align: center; 
-}
-
-.journey ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.journey li a{
-    font-size: 1.2rem;
-    color: black;
-    margin-left: 2rem;
-}
-.journey li a:hover{
-    color:var(--primary-color);
-    text-decoration: underline;
-}
-
-/* Team Section */
-.team {
-    text-align: center;
-    margin: 3rem 0;
-    padding-bottom: 2rem;
-    
-    
-}
-
-
-.team-member {
-    background-color: #D9D9D9;
-    margin: 3rem auto;
-    padding: 3rem;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 700px;
-    text-align: left;
+.product-grid, .form-row{
     display: flex;
-    gap: 2rem;
-    display: block;
-    text-align: center;
-    margin-top: 5rem;
+    justify-content: space-around;
+    align-items: center;
+    gap:5px;
 }
-.team-section{
+.product-grid h3{
+    font-size:1.5rem;
+    font-weight: bold;
+}
+.productImg img{
+    width: 150px;
+    height: 200px;
+    border-radius: 5%;
+}
+.product-info{
+    width: 80%;
+}
+.product-grid{
+    padding: 5px;
+    border-bottom: solid .5px lightgray;
+}
+.price {
+    font-weight: bold;
+    float: right;
+}
+
+/*Our compny page (for Leyla)*/
+   /**our compy page section 1...**/
+
+/* journey page (Leyla)*/
+   /**journey section 1...**/
+
+/*signIn page (kc)*/
+
+/*contact us page (Lu)*/
+.contactUSpage{
+    max-width: 1200px;
+}
+.contactUSpage h2{
+     font-family: "Caveat", serif;
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+.contactUSpage h3{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.signin-section{margin-bottom: 40px;}
+
+.signin-form, .contact-form{
+    background-color: #ede8e8;
+    font-size: 2rem;
+    font-weight: 80;
+    padding: 30px;
+    border-radius: 6px;
+}
+.diet-type, .meals-type{
+    border-bottom: dashed .8px gray;
+    margin-bottom: 30px;
+}
+
+.radio-group, .checkbox-group{
     display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+    flex-wrap: wrap;
+    margin: 5px;
 }
-
-.team-member img {
-    width: 200px;
-    height: auto;
-/*    border-radius: 50%;*/
-    object-fit: cover;
-}
-
-.team-member h3 {
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #333;
-    font-family: sans-serif;
-    padding-bottom: 1rem
-}
-
-.team-member p {
-    margin: 0.5rem 0 0;
-    font-size: 1rem;
-    text-align: left;
-    padding-left: 2rem;
-    color: black;
-    
+.radio-group label, .checkbox-group label{padding: 20px;}
+.signin-form p{
+    color: gray;
 }
 /********MAGAZINE-PAGE*******************************************************************/
 
@@ -426,20 +568,32 @@ main section.hero {
     list-style-type: circle;
     margin-left: 3rem;
     font-size: 1.5rem;
+    text-align: center;
 }
-.magazine h3,h4{
-    font-family: sans-serif;
-    color: black;
-    margin: 3rem 0;
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+#message{border: none;}
+.signin-button, .submit-button{
+    text-align: center;
+    width:95%;
+}
 
-}
-.magazine h5{
-    font-family: sans-serif;
-    font-size: 1rem;
-    margin: 4rem;
-    text-align: end;
 
+/*empty cart page (lu)*/
+.empty-cart{
+    text-align: center;
 }
+
+/*Ads(lu)*/
+.ad{text-align: center;}
+.ad h2{
+    font-size:1.5rem;
+    color: #444;
+}
+
 
 
 /*******************************************************
@@ -450,80 +604,111 @@ footer {
     color:  var(--light-color);
     padding: 2rem;
     text-align: center;
+    margin: 0 auto;
+    max-width: 1200px;
 }
+footer h2 {
+    color: var(--light-color);
+    margin-bottom: 1rem;
+}
+.customer-service, .payment-method, .social-media {
+    align-self: center;
+    margin-bottom: 30px;
+}
+.customer-service li{
+    padding: 10px;
+    font-size: 2rem;
+}
+.payment-icons, .social-icons {
+    display: flex;
+    justify-content: space-around;
+}
+.payment-icons{
+    margin: 20px;
+    flex-wrap: wrap;}
+    
+.payment-icons img{margin: 0 20px;}
+.social-icons svg{width: 30%;}
 
-footer a, footer a:visited, footer h6 {
+footer a, footer a:visited {
     color:  var(--light-color);
 }
 
 footer a:hover {
     color: var(--highlight-color);
 }
-footer nav a, footer a:hover {
-    text-decoration: underline;
-}
-footer i {
-    font-size: 2rem;
-    padding: 1em;
-}
-footer i a:hover {
-    text-decoration: none;
-}
-.end-logo img {
-    width: 100px;
-    padding-right: 15px;
-}
 
-.end-logo {
+.copyright {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.end-logo p {
+.copyright p {
     font-size: 1.5rem;
     margin: 0;
+    align-self: center;
 }
+
 
 /*******************************************************
-    7. FORMS
+    7.Responsive design
  ******************************************************/
-input[type=submit], button {
-    background-color: var(--primary-color);
-    border-radius: 5px;
-    border: 0;
-    color:  var(--light-color);
-    font-family: "Assistant", sans-serif;
-    margin: 1rem auto;
-    padding: 1rem;
-    text-align: center;
-    font-weight: bold
+
+@media screen and (min-width:768px){
+   header, .hero, .holiday-special, main, footer>*{
+        max-width:1200px;
+        margin: auto;
+    }
+    /*Nav large*/
+    .nav-menu {
+    display: flex;
+    list-style: none;
+    gap:30px;
+    }
+
+   .nav-menu a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-input[type=submit]:hover, button:hover {
-    background-color: var(--secondary-color);
-    color:  var(--light-color);
-    cursor: pointer;
+   .nav-menu a:hover {
+    color: var(--highlight-color);
 }
 
-input[type=text], input[type=number], input[type=email], input[type=tel], textarea, select {
-    border: 1px solid var(--dark-color);
-    font-family: "Assistant", sans-serif;
-    margin: 1rem 0 2rem;
-    padding: .75rem;
-    width: 90%;
-    display: block;
+    .material-symbols-outlined{margin-right: 30px;}
+    
+    /**homepage hero large**/
+  .hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
 }
-
-fieldset {
-    border: 1px dashed var(--primary-color);
-    margin: 2rem 0;
-    padding: 2rem;
-}
-
-legend {
-    color: var(--primary-color);
-}
+  .heroImg{
+    grid-column: 1/2;
+    grid-row: 1/3;  
+   }
+  .heroText{
+    grid-column: 2/3;
+    grid-row: 1/2;
+   }
+  .HomeSignup-form{
+    grid-column: 2/3;
+    grid-row: 2/3;
+   }
+  .heroText, HomeSignup-form{
+    padding: 30px;
+   }
+  .recipe-link {
+  color: #65b504;
+  text-decoration: none;
+  margin-left: 300px;
+  }
+  .HomeSignup-form {
+  }
 
 /*******************************************************
     8. MEDIA QUERIES
@@ -542,132 +727,89 @@ legend {
     }
     nav input[type=checkbox]:checked ~ ul.menu {
     display: flex;
-  
-}
+    flex-direction: column;
+    align-content: center;
+   }
+  .sign-in-text{
+    margin-left: 200px;
+   }
     
-    .menu a {
-        font-size: 1.2rem;  /* Adjust font size if necessary */
-    }
-
-    /* Show the .menu items side by side */
-    nav ul.menu {
+    /**recipe section large**/
+  .recipe-carousel{ flex-wrap: nowrap;}
+  .tips-carousel{display: flex;}
+    
+    /**Products Section large **/
+    .products-carousel {
         display: flex;
-        flex-direction: row;  /* Align menu items horizontally */
-      /* Space between menu items */
+        gap:8rem;
     }
-
-    /* Hide hamburger menu after 768px */
-    .showMenu {
-        display: none;
-    }
-
-    .menu button { 
-        background-color: var(--secondary-color);
-        align-items: center;      /* Vertically center */
+   .books{
+    flex-wrap: nowrap;
+    border-bottom: none;
+   }
+    
+    /**productPage hero large**/
+    
+    .promo-content{flex-wrap:nowrap;}
+    .holiday-special h1{font-size: 8rem;}
+    .discount h2{font-size:8rem;}
+    .discount h3{font-size:6rem;}
+    
+    /**product categories large**/
+    .category-cookbooks, .product-actions, .category-cookware{
         display: flex;
-        justify-content: center;  /* Horizontally center */
-    }    
-    .menu button:hover { 
-        background-color: var(--highlight-color);
-        color:  var(--primary-color);
+        justify-content: space-around;
+        align-items: center;
     }
-    .header {
-        justify-content: space-between;
-       
+    .product-grid{
+        width: 800px;
+        border-bottom:none;
     }
+
+    .product-info{
+        width: 60%;
+        padding: 20px;
+    }
+    .product-actions{
+    width: 400px;
+    margin: 10px;
+}
+    .category-cookbooks, .category-cookware{border-bottom: solid .5px lightgray;}
+
 
     div .menu i.fa-cart-shopping{ font-size: 2.5rem}
 
 /***********ABOUT-US*******************************************************/
 p{font-size: 2rem;}
 
+
     
-.journey {
-    text-align: center;
-}
-
-.journey h2 {
-    margin: 3rem 0;
-    font-size: 2.5rem;
-    color: #333;
-}
-
-.journey ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Flexbox for alignment */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: space-around; /* Center the items */
-    gap: 5rem; /* Space between items */
-}
-
-.journey ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #D9D9D9; /* Light orange background */
-    border-radius: 50%; /* Makes the background round */
-    width: 250px; /* Fixed width for round shape */
-    height: 250px; /* Fixed height for round shape */
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.journey ul li:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-    background-color: var(--highlight-color); /* Change background color on hover */
-}
-
-.journey ul li a {
-    text-decoration: none;
-    color: #444;
-    font-weight:600;
-    transition: color 0.3s ease;
-    text-align: center;
-    font-size: 2rem;
-    margin: 0;
-}
-
-.team{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-/************OUR-JOURNEY*************************************************************/
-    .magazine{
-        font-size: 3rem;
+    /**contact us page large**/
+    .contactUSpage{
+       display: flex;
+       justify-content: space-around;
+       padding: 20px;
+       margin: auto;
     }
-    .magazine ul{
-        font-size: 2rem;
+
+    /*footer large*/
+    .footer-content{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
     }
+    .customer-service{
+      grid-column: 1/2;
+      grid-row: 1/3;  
+     }
+    .payment-method{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        flex-wrap: nowrap;
+    }
+
+    .social-media{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    }   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
